@@ -1,0 +1,3037 @@
+{
+  "project": "EventSphere",
+  "version": "1.0.0+1",
+  "base_url": "http://localhost:8080",
+  "test_suites": [
+    {
+      "suite": "Onboarding",
+      "tests": [
+        {
+          "id": "TC-001",
+          "name": "Verify Splash screen displays logo & brand",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Splash screen displays logo & brand"
+          ],
+          "expected": "Splash screen displays logo & brand completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-002",
+          "name": "Verify Splash auto-redirects to Onboarding page 1",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Splash auto-redirects to Onboarding page 1"
+          ],
+          "expected": "Splash auto-redirects to Onboarding page 1 completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-003",
+          "name": "Verify Onboarding page 1 title & graphic display",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Onboarding page 1 title & graphic display"
+          ],
+          "expected": "Onboarding page 1 title & graphic display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-004",
+          "name": "Verify Onboarding page 2 swipe gesture navigation",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Onboarding page 2 swipe gesture navigation"
+          ],
+          "expected": "Onboarding page 2 swipe gesture navigation completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-005",
+          "name": "Verify Onboarding page 3 button click navigation",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Onboarding page 3 button click navigation"
+          ],
+          "expected": "Onboarding page 3 button click navigation completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-006",
+          "name": "Verify Skip button redirects directly to Login",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Skip button redirects directly to Login"
+          ],
+          "expected": "Skip button redirects directly to Login completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-007",
+          "name": "Verify Dot indicator updates on swipe transition",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Dot indicator updates on swipe transition"
+          ],
+          "expected": "Dot indicator updates on swipe transition completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-008",
+          "name": "Verify Get Started CTA button navigates to Login",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Get Started CTA button navigates to Login"
+          ],
+          "expected": "Get Started CTA button navigates to Login completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-009",
+          "name": "Verify Onboarding animations load smoothly",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Onboarding animations load smoothly"
+          ],
+          "expected": "Onboarding animations load smoothly completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-010",
+          "name": "Verify Language selector dropdown on Onboarding",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Language selector dropdown on Onboarding"
+          ],
+          "expected": "Language selector dropdown on Onboarding completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-011",
+          "name": "Verify Dark mode toggle on splash screen",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Dark mode toggle on splash screen"
+          ],
+          "expected": "Dark mode toggle on splash screen completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-012",
+          "name": "Verify App orientation locks to portrait mode",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute App orientation locks to portrait mode"
+          ],
+          "expected": "App orientation locks to portrait mode completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-013",
+          "name": "Verify Network disconnect banner during onboarding",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Network disconnect banner during onboarding"
+          ],
+          "expected": "Network disconnect banner during onboarding completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-014",
+          "name": "Verify Terms & privacy policy link on onboarding",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Terms & privacy policy link on onboarding"
+          ],
+          "expected": "Terms & privacy policy link on onboarding completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-015",
+          "name": "Verify Welcome video playback on onboarding 2",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Welcome video playback on onboarding 2"
+          ],
+          "expected": "Welcome video playback on onboarding 2 completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-016",
+          "name": "Verify Deep link navigation bypasses onboarding",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Deep link navigation bypasses onboarding"
+          ],
+          "expected": "Deep link navigation bypasses onboarding completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-017",
+          "name": "Verify Cold boot state restoration check",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Cold boot state restoration check"
+          ],
+          "expected": "Cold boot state restoration check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-018",
+          "name": "Verify Accessibility text sizing on onboarding",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Accessibility text sizing on onboarding"
+          ],
+          "expected": "Accessibility text sizing on onboarding completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-019",
+          "name": "Verify Screen reader labels on onboarding CTAs",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Screen reader labels on onboarding CTAs"
+          ],
+          "expected": "Screen reader labels on onboarding CTAs completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-020",
+          "name": "Verify Onboarding session state flag saved",
+          "steps": [
+            "1. Open Onboarding view",
+            "2. Execute Onboarding session state flag saved"
+          ],
+          "expected": "Onboarding session state flag saved completes as expected",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "suite": "Authentication",
+      "tests": [
+        {
+          "id": "TC-021",
+          "name": "Verify Login UI elements render correctly",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Login UI elements render correctly"
+          ],
+          "expected": "Login UI elements render correctly completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-022",
+          "name": "Verify Validation for empty email & password",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Validation for empty email & password"
+          ],
+          "expected": "Validation for empty email & password completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-023",
+          "name": "Verify Invalid email format validation error",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Invalid email format validation error"
+          ],
+          "expected": "Invalid email format validation error completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-024",
+          "name": "Verify Password length under 6 chars validation",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Password length under 6 chars validation"
+          ],
+          "expected": "Password length under 6 chars validation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-025",
+          "name": "Verify Invalid credentials trigger error snackbar",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Invalid credentials trigger error snackbar"
+          ],
+          "expected": "Invalid credentials trigger error snackbar completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-026",
+          "name": "Verify Password visibility toggle eye icon",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Password visibility toggle eye icon"
+          ],
+          "expected": "Password visibility toggle eye icon completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-027",
+          "name": "Verify Remember me checkbox state persistence",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Remember me checkbox state persistence"
+          ],
+          "expected": "Remember me checkbox state persistence completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-028",
+          "name": "Verify Google OAuth sign in action trigger",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Google OAuth sign in action trigger"
+          ],
+          "expected": "Google OAuth sign in action trigger completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-029",
+          "name": "Verify GitHub OAuth sign in action trigger",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute GitHub OAuth sign in action trigger"
+          ],
+          "expected": "GitHub OAuth sign in action trigger completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-030",
+          "name": "Verify Sign Up link navigation from Login",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Sign Up link navigation from Login"
+          ],
+          "expected": "Sign Up link navigation from Login completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-031",
+          "name": "Verify Customer credentials login redirection",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Customer credentials login redirection"
+          ],
+          "expected": "Customer credentials login redirection completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-032",
+          "name": "Verify Vendor credentials login redirection",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Vendor credentials login redirection"
+          ],
+          "expected": "Vendor credentials login redirection completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-033",
+          "name": "Verify Sign Up UI required fields validation",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Sign Up UI required fields validation"
+          ],
+          "expected": "Sign Up UI required fields validation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-034",
+          "name": "Verify Empty field validation errors on Sign Up",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Empty field validation errors on Sign Up"
+          ],
+          "expected": "Empty field validation errors on Sign Up completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-035",
+          "name": "Verify Duplicate email registration error handling",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Duplicate email registration error handling"
+          ],
+          "expected": "Duplicate email registration error handling completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-036",
+          "name": "Verify Vendor role switch displays Shop & Pincode",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Vendor role switch displays Shop & Pincode"
+          ],
+          "expected": "Vendor role switch displays Shop & Pincode completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-037",
+          "name": "Verify Customer role switch hides vendor fields",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Customer role switch hides vendor fields"
+          ],
+          "expected": "Customer role switch hides vendor fields completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-038",
+          "name": "Verify Non-numeric pincode format validation",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Non-numeric pincode format validation"
+          ],
+          "expected": "Non-numeric pincode format validation completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-039",
+          "name": "Verify Pincode length boundary validation",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Pincode length boundary validation"
+          ],
+          "expected": "Pincode length boundary validation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-040",
+          "name": "Verify Phone number international format check",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Phone number international format check"
+          ],
+          "expected": "Phone number international format check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-041",
+          "name": "Verify Customer signup saves record to Firestore",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Customer signup saves record to Firestore"
+          ],
+          "expected": "Customer signup saves record to Firestore completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-042",
+          "name": "Verify Vendor signup saves shop details to Firestore",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Vendor signup saves shop details to Firestore"
+          ],
+          "expected": "Vendor signup saves shop details to Firestore completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-043",
+          "name": "Verify Location field empty validation check",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Location field empty validation check"
+          ],
+          "expected": "Location field empty validation check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-044",
+          "name": "Verify Password toggle functionality on Signup",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Password toggle functionality on Signup"
+          ],
+          "expected": "Password toggle functionality on Signup completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-045",
+          "name": "Verify Sign In redirect link from Signup page",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Sign In redirect link from Signup page"
+          ],
+          "expected": "Sign In redirect link from Signup page completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-046",
+          "name": "Verify Forgot Password UI email input & button",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Forgot Password UI email input & button"
+          ],
+          "expected": "Forgot Password UI email input & button completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-047",
+          "name": "Verify Empty email validation on Forgot Password",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Empty email validation on Forgot Password"
+          ],
+          "expected": "Empty email validation on Forgot Password completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-048",
+          "name": "Verify Valid email triggers password reset link",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Valid email triggers password reset link"
+          ],
+          "expected": "Valid email triggers password reset link completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-049",
+          "name": "Verify Unregistered email error response handling",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Unregistered email error response handling"
+          ],
+          "expected": "Unregistered email error response handling completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-050",
+          "name": "Verify Back to Login button action on Forgot Pass",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Back to Login button action on Forgot Pass"
+          ],
+          "expected": "Back to Login button action on Forgot Pass completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-051",
+          "name": "Verify Session token auto-refresh handling",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Session token auto-refresh handling"
+          ],
+          "expected": "Session token auto-refresh handling completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-052",
+          "name": "Verify Auto-login with saved credentials",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Auto-login with saved credentials"
+          ],
+          "expected": "Auto-login with saved credentials completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-053",
+          "name": "Verify Sign out clears session tokens & cart",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Sign out clears session tokens & cart"
+          ],
+          "expected": "Sign out clears session tokens & cart completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-054",
+          "name": "Verify Session timeout forces re-authentication",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Session timeout forces re-authentication"
+          ],
+          "expected": "Session timeout forces re-authentication completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-055",
+          "name": "Verify Concurrent login prevention check",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Concurrent login prevention check"
+          ],
+          "expected": "Concurrent login prevention check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-056",
+          "name": "Verify Biometric authentication prompt display",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Biometric authentication prompt display"
+          ],
+          "expected": "Biometric authentication prompt display completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-057",
+          "name": "Verify Password strength meter indicator check",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Password strength meter indicator check"
+          ],
+          "expected": "Password strength meter indicator check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-058",
+          "name": "Verify Account lockout after 5 failed attempts",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Account lockout after 5 failed attempts"
+          ],
+          "expected": "Account lockout after 5 failed attempts completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-059",
+          "name": "Verify Email verification email banner display",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Email verification email banner display"
+          ],
+          "expected": "Email verification email banner display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-060",
+          "name": "Verify Resend verification email button action",
+          "steps": [
+            "1. Open Authentication view",
+            "2. Execute Resend verification email button action"
+          ],
+          "expected": "Resend verification email button action completes as expected",
+          "severity": "High"
+        }
+      ]
+    },
+    {
+      "suite": "Customer Module",
+      "tests": [
+        {
+          "id": "TC-061",
+          "name": "Verify Personalized greeting with user first name",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Personalized greeting with user first name"
+          ],
+          "expected": "Personalized greeting with user first name completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-062",
+          "name": "Verify Services grid cards render with icons",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Services grid cards render with icons"
+          ],
+          "expected": "Services grid cards render with icons completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-063",
+          "name": "Verify Search card navigates to Categories page",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Search card navigates to Categories page"
+          ],
+          "expected": "Search card navigates to Categories page completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-064",
+          "name": "Verify Track card navigates to Order Tracking",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Track card navigates to Order Tracking"
+          ],
+          "expected": "Track card navigates to Order Tracking completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-065",
+          "name": "Verify Chat card navigates to Messages screen",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Chat card navigates to Messages screen"
+          ],
+          "expected": "Chat card navigates to Messages screen completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-066",
+          "name": "Verify Profile card navigates to My Profile",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Profile card navigates to My Profile"
+          ],
+          "expected": "Profile card navigates to My Profile completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-067",
+          "name": "Verify AI Planner banner redirects to AI Recs",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute AI Planner banner redirects to AI Recs"
+          ],
+          "expected": "AI Planner banner redirects to AI Recs completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-068",
+          "name": "Verify Notification bell icon badge count",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Notification bell icon badge count"
+          ],
+          "expected": "Notification bell icon badge count completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-069",
+          "name": "Verify Featured Equipment carousel scrolling",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Featured Equipment carousel scrolling"
+          ],
+          "expected": "Featured Equipment carousel scrolling completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-070",
+          "name": "Verify Top-rated Vendors section rendering",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Top-rated Vendors section rendering"
+          ],
+          "expected": "Top-rated Vendors section rendering completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-071",
+          "name": "Verify Recent Rentals history horizontal list",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Recent Rentals history horizontal list"
+          ],
+          "expected": "Recent Rentals history horizontal list completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-072",
+          "name": "Verify Event Category quick filter chips",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Event Category quick filter chips"
+          ],
+          "expected": "Event Category quick filter chips completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-073",
+          "name": "Verify Home screen pull-to-refresh action",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Home screen pull-to-refresh action"
+          ],
+          "expected": "Home screen pull-to-refresh action completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-074",
+          "name": "Verify Location selector modal pop-up check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Location selector modal pop-up check"
+          ],
+          "expected": "Location selector modal pop-up check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-075",
+          "name": "Verify Banner ad image load and tap response",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Banner ad image load and tap response"
+          ],
+          "expected": "Banner ad image load and tap response completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-076",
+          "name": "Verify Popular Event Packages card click",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Popular Event Packages card click"
+          ],
+          "expected": "Popular Event Packages card click completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-077",
+          "name": "Verify Emergency customer support banner",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Emergency customer support banner"
+          ],
+          "expected": "Emergency customer support banner completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-078",
+          "name": "Verify Discount promo code banner tap action",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Discount promo code banner tap action"
+          ],
+          "expected": "Discount promo code banner tap action completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-079",
+          "name": "Verify Offline caching for home screen data",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Offline caching for home screen data"
+          ],
+          "expected": "Offline caching for home screen data completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-080",
+          "name": "Verify Dynamic theme color theme adapt",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Dynamic theme color theme adapt"
+          ],
+          "expected": "Dynamic theme color theme adapt completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-081",
+          "name": "Verify Category grid displays Sound, Lighting, AV",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Category grid displays Sound, Lighting, AV"
+          ],
+          "expected": "Category grid displays Sound, Lighting, AV completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-082",
+          "name": "Verify Keyword search filters category list",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Keyword search filters category list"
+          ],
+          "expected": "Keyword search filters category list completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-083",
+          "name": "Verify Empty search query displays all items",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Empty search query displays all items"
+          ],
+          "expected": "Empty search query displays all items completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-084",
+          "name": "Verify Non-matching search shows placeholder",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Non-matching search shows placeholder"
+          ],
+          "expected": "Non-matching search shows placeholder completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-085",
+          "name": "Verify Category tile tap opens Equipment List",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Category tile tap opens Equipment List"
+          ],
+          "expected": "Category tile tap opens Equipment List completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-086",
+          "name": "Verify Header back arrow button returns to Home",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Header back arrow button returns to Home"
+          ],
+          "expected": "Header back arrow button returns to Home completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-087",
+          "name": "Verify Category list sorting by popularity",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Category list sorting by popularity"
+          ],
+          "expected": "Category list sorting by popularity completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-088",
+          "name": "Verify Filter sheet modal open/close check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Filter sheet modal open/close check"
+          ],
+          "expected": "Filter sheet modal open/close check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-089",
+          "name": "Verify Price range slider min/max adjustments",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Price range slider min/max adjustments"
+          ],
+          "expected": "Price range slider min/max adjustments completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-090",
+          "name": "Verify Availability date picker range selection",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Availability date picker range selection"
+          ],
+          "expected": "Availability date picker range selection completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-091",
+          "name": "Verify Vendor filter multi-select checkbox",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Vendor filter multi-select checkbox"
+          ],
+          "expected": "Vendor filter multi-select checkbox completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-092",
+          "name": "Verify Rating filter 4+ stars check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rating filter 4+ stars check"
+          ],
+          "expected": "Rating filter 4+ stars check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-093",
+          "name": "Verify Clear all filters button functionality",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Clear all filters button functionality"
+          ],
+          "expected": "Clear all filters button functionality completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-094",
+          "name": "Verify Grid view vs List view layout toggle",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Grid view vs List view layout toggle"
+          ],
+          "expected": "Grid view vs List view layout toggle completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-095",
+          "name": "Verify Search history chips display and tap",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Search history chips display and tap"
+          ],
+          "expected": "Search history chips display and tap completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-096",
+          "name": "Verify Recent searches clear action check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Recent searches clear action check"
+          ],
+          "expected": "Recent searches clear action check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-097",
+          "name": "Verify Voice search microphone icon action",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Voice search microphone icon action"
+          ],
+          "expected": "Voice search microphone icon action completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-098",
+          "name": "Verify Category bookmark / favorite toggle",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Category bookmark / favorite toggle"
+          ],
+          "expected": "Category bookmark / favorite toggle completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-099",
+          "name": "Verify Sub-category tab navigation bar",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Sub-category tab navigation bar"
+          ],
+          "expected": "Sub-category tab navigation bar completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-100",
+          "name": "Verify Item count header text verification",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Item count header text verification"
+          ],
+          "expected": "Item count header text verification completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-101",
+          "name": "Verify Equipment list asynchronous loading",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Equipment list asynchronous loading"
+          ],
+          "expected": "Equipment list asynchronous loading completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-102",
+          "name": "Verify Detail screen renders name, price, rating",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Detail screen renders name, price, rating"
+          ],
+          "expected": "Detail screen renders name, price, rating completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-103",
+          "name": "Verify Rental days counter increment '+' button",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rental days counter increment '+' button"
+          ],
+          "expected": "Rental days counter increment '+' button completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-104",
+          "name": "Verify Rental days counter minimum limit '1'",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rental days counter minimum limit '1'"
+          ],
+          "expected": "Rental days counter minimum limit '1' completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-105",
+          "name": "Verify Add to Cart displays success snackbar",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Add to Cart displays success snackbar"
+          ],
+          "expected": "Add to Cart displays success snackbar completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-106",
+          "name": "Verify Duplicate item addition increments quantity",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Duplicate item addition increments quantity"
+          ],
+          "expected": "Duplicate item addition increments quantity completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-107",
+          "name": "Verify Equipment photo gallery carousel scroll",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Equipment photo gallery carousel scroll"
+          ],
+          "expected": "Equipment photo gallery carousel scroll completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-108",
+          "name": "Verify Full screen image preview modal check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Full screen image preview modal check"
+          ],
+          "expected": "Full screen image preview modal check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-109",
+          "name": "Verify Vendor profile card tap inside detail",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Vendor profile card tap inside detail"
+          ],
+          "expected": "Vendor profile card tap inside detail completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-110",
+          "name": "Verify Equipment technical specs accordion",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Equipment technical specs accordion"
+          ],
+          "expected": "Equipment technical specs accordion completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-111",
+          "name": "Verify Customer reviews and star ratings list",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Customer reviews and star ratings list"
+          ],
+          "expected": "Customer reviews and star ratings list completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-112",
+          "name": "Verify Write review button open feedback form",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Write review button open feedback form"
+          ],
+          "expected": "Write review button open feedback form completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-113",
+          "name": "Verify Share equipment link share sheet",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Share equipment link share sheet"
+          ],
+          "expected": "Share equipment link share sheet completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-114",
+          "name": "Verify Favorite / wishlist heart icon toggle",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Favorite / wishlist heart icon toggle"
+          ],
+          "expected": "Favorite / wishlist heart icon toggle completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-115",
+          "name": "Verify Deposit amount calculation preview",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Deposit amount calculation preview"
+          ],
+          "expected": "Deposit amount calculation preview completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-116",
+          "name": "Verify Delivery fee estimate calculator check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Delivery fee estimate calculator check"
+          ],
+          "expected": "Delivery fee estimate calculator check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-117",
+          "name": "Verify Cancellation policy expandable section",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cancellation policy expandable section"
+          ],
+          "expected": "Cancellation policy expandable section completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-118",
+          "name": "Verify Equipment condition verification badge",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Equipment condition verification badge"
+          ],
+          "expected": "Equipment condition verification badge completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-119",
+          "name": "Verify Included accessories checklist display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Included accessories checklist display"
+          ],
+          "expected": "Included accessories checklist display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-120",
+          "name": "Verify Inquire with vendor direct message button",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Inquire with vendor direct message button"
+          ],
+          "expected": "Inquire with vendor direct message button completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-121",
+          "name": "Verify Empty cart placeholder & browse CTA",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Empty cart placeholder & browse CTA"
+          ],
+          "expected": "Empty cart placeholder & browse CTA completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-122",
+          "name": "Verify Cart item details match selected equipment",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cart item details match selected equipment"
+          ],
+          "expected": "Cart item details match selected equipment completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-123",
+          "name": "Verify Increment quantity updates subtotal",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Increment quantity updates subtotal"
+          ],
+          "expected": "Increment quantity updates subtotal completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-124",
+          "name": "Verify Decrement quantity updates subtotal",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Decrement quantity updates subtotal"
+          ],
+          "expected": "Decrement quantity updates subtotal completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-125",
+          "name": "Verify Delete item trash icon removes product",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Delete item trash icon removes product"
+          ],
+          "expected": "Delete item trash icon removes product completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-126",
+          "name": "Verify 10% Tax calculation accuracy check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute 10% Tax calculation accuracy check"
+          ],
+          "expected": "10% Tax calculation accuracy check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-127",
+          "name": "Verify Proceed to Checkout button navigation",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Proceed to Checkout button navigation"
+          ],
+          "expected": "Proceed to Checkout button navigation completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-128",
+          "name": "Verify Clear cart confirmation dialog prompt",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Clear cart confirmation dialog prompt"
+          ],
+          "expected": "Clear cart confirmation dialog prompt completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-129",
+          "name": "Verify Cart item price multiplier by days",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cart item price multiplier by days"
+          ],
+          "expected": "Cart item price multiplier by days completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-130",
+          "name": "Verify Promo code input field and apply CTA",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Promo code input field and apply CTA"
+          ],
+          "expected": "Promo code input field and apply CTA completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-131",
+          "name": "Verify Invalid promo code error message",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Invalid promo code error message"
+          ],
+          "expected": "Invalid promo code error message completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-132",
+          "name": "Verify Valid promo code discount calculation",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Valid promo code discount calculation"
+          ],
+          "expected": "Valid promo code discount calculation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-133",
+          "name": "Verify Subtotal + Tax + Delivery = Grand Total",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Subtotal + Tax + Delivery = Grand Total"
+          ],
+          "expected": "Subtotal + Tax + Delivery = Grand Total completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-134",
+          "name": "Verify Cart item count badge on nav bar",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cart item count badge on nav bar"
+          ],
+          "expected": "Cart item count badge on nav bar completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-135",
+          "name": "Verify Persist cart state on app restart",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Persist cart state on app restart"
+          ],
+          "expected": "Persist cart state on app restart completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-136",
+          "name": "Verify Minimum order total warning dialog",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Minimum order total warning dialog"
+          ],
+          "expected": "Minimum order total warning dialog completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-137",
+          "name": "Verify Bulk quantity discount banner check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Bulk quantity discount banner check"
+          ],
+          "expected": "Bulk quantity discount banner check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-138",
+          "name": "Verify Stock availability warning on excess qty",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Stock availability warning on excess qty"
+          ],
+          "expected": "Stock availability warning on excess qty completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-139",
+          "name": "Verify Save for later button item move",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Save for later button item move"
+          ],
+          "expected": "Save for later button item move completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-140",
+          "name": "Verify Estimated delivery date message display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Estimated delivery date message display"
+          ],
+          "expected": "Estimated delivery date message display completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-141",
+          "name": "Verify Checkout form renders address & details",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Checkout form renders address & details"
+          ],
+          "expected": "Checkout form renders address & details completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-142",
+          "name": "Verify Empty field validation on submit request",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Empty field validation on submit request"
+          ],
+          "expected": "Empty field validation on submit request completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-143",
+          "name": "Verify Successful order placement in Firestore",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Successful order placement in Firestore"
+          ],
+          "expected": "Successful order placement in Firestore completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-144",
+          "name": "Verify Cart emptied automatically post-submit",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cart emptied automatically post-submit"
+          ],
+          "expected": "Cart emptied automatically post-submit completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-145",
+          "name": "Verify Order confirmation screen displays ID",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Order confirmation screen displays ID"
+          ],
+          "expected": "Order confirmation screen displays ID completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-146",
+          "name": "Verify Track Order button redirects to Tracking",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Track Order button redirects to Tracking"
+          ],
+          "expected": "Track Order button redirects to Tracking completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-147",
+          "name": "Verify Back to Home button redirects to Home",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Back to Home button redirects to Home"
+          ],
+          "expected": "Back to Home button redirects to Home completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-148",
+          "name": "Verify Delivery street address input validation",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Delivery street address input validation"
+          ],
+          "expected": "Delivery street address input validation completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-149",
+          "name": "Verify City & Zipcode mandatory validation",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute City & Zipcode mandatory validation"
+          ],
+          "expected": "City & Zipcode mandatory validation completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-150",
+          "name": "Verify Event date range picker selection check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Event date range picker selection check"
+          ],
+          "expected": "Event date range picker selection check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-151",
+          "name": "Verify Special instructions text area input",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Special instructions text area input"
+          ],
+          "expected": "Special instructions text area input completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-152",
+          "name": "Verify Order items summary table review",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Order items summary table review"
+          ],
+          "expected": "Order items summary table review completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-153",
+          "name": "Verify Contact phone number confirmation field",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Contact phone number confirmation field"
+          ],
+          "expected": "Contact phone number confirmation field completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-154",
+          "name": "Verify Alternate contact person optional field",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Alternate contact person optional field"
+          ],
+          "expected": "Alternate contact person optional field completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-155",
+          "name": "Verify Venue access instructions checkbox",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Venue access instructions checkbox"
+          ],
+          "expected": "Venue access instructions checkbox completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-156",
+          "name": "Verify Terms of rental agreement checkbox",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Terms of rental agreement checkbox"
+          ],
+          "expected": "Terms of rental agreement checkbox completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-157",
+          "name": "Verify Submit request button loading spinner",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Submit request button loading spinner"
+          ],
+          "expected": "Submit request button loading spinner completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-158",
+          "name": "Verify Network retry mechanism on submit error",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Network retry mechanism on submit error"
+          ],
+          "expected": "Network retry mechanism on submit error completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-159",
+          "name": "Verify Order placement audit timestamp check",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Order placement audit timestamp check"
+          ],
+          "expected": "Order placement audit timestamp check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-160",
+          "name": "Verify Send order confirmation email trigger",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Send order confirmation email trigger"
+          ],
+          "expected": "Send order confirmation email trigger completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-161",
+          "name": "Verify Timeline step 0: Request Sent display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Timeline step 0: Request Sent display"
+          ],
+          "expected": "Timeline step 0: Request Sent display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-162",
+          "name": "Verify Timeline step 1: Vendor Confirmed display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Timeline step 1: Vendor Confirmed display"
+          ],
+          "expected": "Timeline step 1: Vendor Confirmed display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-163",
+          "name": "Verify Timeline step 2: Prepared for Dispatch",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Timeline step 2: Prepared for Dispatch"
+          ],
+          "expected": "Timeline step 2: Prepared for Dispatch completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-164",
+          "name": "Verify Timeline step 3: Out for Delivery display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Timeline step 3: Out for Delivery display"
+          ],
+          "expected": "Timeline step 3: Out for Delivery display completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-165",
+          "name": "Verify Timeline step 4: Delivered successfully",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Timeline step 4: Delivered successfully"
+          ],
+          "expected": "Timeline step 4: Delivered successfully completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-166",
+          "name": "Verify Real-time status updates via Firestore",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Real-time status updates via Firestore"
+          ],
+          "expected": "Real-time status updates via Firestore completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-167",
+          "name": "Verify Rejected order UI red banner & note",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rejected order UI red banner & note"
+          ],
+          "expected": "Rejected order UI red banner & note completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-168",
+          "name": "Verify Tracking back button returns to Home",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Tracking back button returns to Home"
+          ],
+          "expected": "Tracking back button returns to Home completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-169",
+          "name": "Verify Call driver / vendor quick button CTA",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Call driver / vendor quick button CTA"
+          ],
+          "expected": "Call driver / vendor quick button CTA completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-170",
+          "name": "Verify Live driver location map placeholder",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Live driver location map placeholder"
+          ],
+          "expected": "Live driver location map placeholder completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-171",
+          "name": "Verify Estimated arrival time countdown timer",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Estimated arrival time countdown timer"
+          ],
+          "expected": "Estimated arrival time countdown timer completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-172",
+          "name": "Verify Order items breakdown list in tracking",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Order items breakdown list in tracking"
+          ],
+          "expected": "Order items breakdown list in tracking completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-173",
+          "name": "Verify Download invoice PDF button trigger",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Download invoice PDF button trigger"
+          ],
+          "expected": "Download invoice PDF button trigger completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-174",
+          "name": "Verify Cancel order request button display",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cancel order request button display"
+          ],
+          "expected": "Cancel order request button display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-175",
+          "name": "Verify Cancellation confirmation modal prompt",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Cancellation confirmation modal prompt"
+          ],
+          "expected": "Cancellation confirmation modal prompt completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-176",
+          "name": "Verify Report issue with delivery button",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Report issue with delivery button"
+          ],
+          "expected": "Report issue with delivery button completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-177",
+          "name": "Verify Rate delivery experience star prompt",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rate delivery experience star prompt"
+          ],
+          "expected": "Rate delivery experience star prompt completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-178",
+          "name": "Verify Return equipment instructions link",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Return equipment instructions link"
+          ],
+          "expected": "Return equipment instructions link completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-179",
+          "name": "Verify Rental extension request form button",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Rental extension request form button"
+          ],
+          "expected": "Rental extension request form button completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-180",
+          "name": "Verify Completed rental receipt view action",
+          "steps": [
+            "1. Open Customer Module view",
+            "2. Execute Completed rental receipt view action"
+          ],
+          "expected": "Completed rental receipt view action completes as expected",
+          "severity": "High"
+        }
+      ]
+    },
+    {
+      "suite": "Vendor Module",
+      "tests": [
+        {
+          "id": "TC-181",
+          "name": "Verify Vendor home quick action cards render",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Vendor home quick action cards render"
+          ],
+          "expected": "Vendor home quick action cards render completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-182",
+          "name": "Verify My Inventory screen displays vendor grid",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute My Inventory screen displays vendor grid"
+          ],
+          "expected": "My Inventory screen displays vendor grid completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-183",
+          "name": "Verify Add Item floating action button visible",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Add Item floating action button visible"
+          ],
+          "expected": "Add Item floating action button visible completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-184",
+          "name": "Verify Add Item bottom sheet opens on FAB tap",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Add Item bottom sheet opens on FAB tap"
+          ],
+          "expected": "Add Item bottom sheet opens on FAB tap completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-185",
+          "name": "Verify Category chip selection color highlight",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Category chip selection color highlight"
+          ],
+          "expected": "Category chip selection color highlight completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-186",
+          "name": "Verify Empty add item form validation errors",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Empty add item form validation errors"
+          ],
+          "expected": "Empty add item form validation errors completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-187",
+          "name": "Verify Successful item creation adds to Firestore",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Successful item creation adds to Firestore"
+          ],
+          "expected": "Successful item creation adds to Firestore completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-188",
+          "name": "Verify Edit inventory item details action",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Edit inventory item details action"
+          ],
+          "expected": "Edit inventory item details action completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-189",
+          "name": "Verify Delete inventory item with confirm dialog",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Delete inventory item with confirm dialog"
+          ],
+          "expected": "Delete inventory item with confirm dialog completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-190",
+          "name": "Verify Toggle item availability stock switch",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Toggle item availability stock switch"
+          ],
+          "expected": "Toggle item availability stock switch completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-191",
+          "name": "Verify Inventory search bar filters vendor items",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Inventory search bar filters vendor items"
+          ],
+          "expected": "Inventory search bar filters vendor items completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-192",
+          "name": "Verify Price per day edit text input check",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Price per day edit text input check"
+          ],
+          "expected": "Price per day edit text input check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-193",
+          "name": "Verify Upload equipment photo gallery picker",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Upload equipment photo gallery picker"
+          ],
+          "expected": "Upload equipment photo gallery picker completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-194",
+          "name": "Verify Equipment status active / maintenance tag",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Equipment status active / maintenance tag"
+          ],
+          "expected": "Equipment status active / maintenance tag completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-195",
+          "name": "Verify Item total bookings count display",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Item total bookings count display"
+          ],
+          "expected": "Item total bookings count display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-196",
+          "name": "Verify Duplicate inventory item quick action",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Duplicate inventory item quick action"
+          ],
+          "expected": "Duplicate inventory item quick action completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-197",
+          "name": "Verify Bulk inventory export to CSV action",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Bulk inventory export to CSV action"
+          ],
+          "expected": "Bulk inventory export to CSV action completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-198",
+          "name": "Verify Low availability stock warning badge",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Low availability stock warning badge"
+          ],
+          "expected": "Low availability stock warning badge completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-199",
+          "name": "Verify Equipment category filter on inventory",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Equipment category filter on inventory"
+          ],
+          "expected": "Equipment category filter on inventory completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-200",
+          "name": "Verify Inventory analytics total items count",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Inventory analytics total items count"
+          ],
+          "expected": "Inventory analytics total items count completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-201",
+          "name": "Verify Rental requests list displays orders",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Rental requests list displays orders"
+          ],
+          "expected": "Rental requests list displays orders completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-202",
+          "name": "Verify Vendor approve request updates status",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Vendor approve request updates status"
+          ],
+          "expected": "Vendor approve request updates status completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-203",
+          "name": "Verify Vendor reject request updates status",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Vendor reject request updates status"
+          ],
+          "expected": "Vendor reject request updates status completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-204",
+          "name": "Verify Logistics milestone status dropdown",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Logistics milestone status dropdown"
+          ],
+          "expected": "Logistics milestone status dropdown completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-205",
+          "name": "Verify Filter requests by status tab bar",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Filter requests by status tab bar"
+          ],
+          "expected": "Filter requests by status tab bar completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-206",
+          "name": "Verify Customer contact info card tap action",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Customer contact info card tap action"
+          ],
+          "expected": "Customer contact info card tap action completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-207",
+          "name": "Verify Accept request confirmation modal",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Accept request confirmation modal"
+          ],
+          "expected": "Accept request confirmation modal completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-208",
+          "name": "Verify Reject request reason prompt text area",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Reject request reason prompt text area"
+          ],
+          "expected": "Reject request reason prompt text area completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-209",
+          "name": "Verify Update tracking step 2: Prepared",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Update tracking step 2: Prepared"
+          ],
+          "expected": "Update tracking step 2: Prepared completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-210",
+          "name": "Verify Update tracking step 3: Out for Delivery",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Update tracking step 3: Out for Delivery"
+          ],
+          "expected": "Update tracking step 3: Out for Delivery completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-211",
+          "name": "Verify Update tracking step 4: Delivered",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Update tracking step 4: Delivered"
+          ],
+          "expected": "Update tracking step 4: Delivered completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-212",
+          "name": "Verify Add tracking note text entry check",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Add tracking note text entry check"
+          ],
+          "expected": "Add tracking note text entry check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-213",
+          "name": "Verify Rental start and end dates validation",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Rental start and end dates validation"
+          ],
+          "expected": "Rental start and end dates validation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-214",
+          "name": "Verify Total revenue for order display check",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Total revenue for order display check"
+          ],
+          "expected": "Total revenue for order display check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-215",
+          "name": "Verify Print dispatch manifest order summary",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Print dispatch manifest order summary"
+          ],
+          "expected": "Print dispatch manifest order summary completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-216",
+          "name": "Verify Equipment pickup scheduling timer",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Equipment pickup scheduling timer"
+          ],
+          "expected": "Equipment pickup scheduling timer completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-217",
+          "name": "Verify Security deposit release button CTA",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Security deposit release button CTA"
+          ],
+          "expected": "Security deposit release button CTA completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-218",
+          "name": "Verify Damage report entry form display",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Damage report entry form display"
+          ],
+          "expected": "Damage report entry form display completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-219",
+          "name": "Verify Overdue rental alert banner display",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Overdue rental alert banner display"
+          ],
+          "expected": "Overdue rental alert banner display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-220",
+          "name": "Verify Order request history search filter",
+          "steps": [
+            "1. Open Vendor Module view",
+            "2. Execute Order request history search filter"
+          ],
+          "expected": "Order request history search filter completes as expected",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "suite": "Admin Module",
+      "tests": [
+        {
+          "id": "TC-221",
+          "name": "Verify Admin dashboard analytics cards render",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Admin dashboard analytics cards render"
+          ],
+          "expected": "Admin dashboard analytics cards render completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-222",
+          "name": "Verify Total users metric count card check",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Total users metric count card check"
+          ],
+          "expected": "Total users metric count card check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-223",
+          "name": "Verify Total equipment items metric count",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Total equipment items metric count"
+          ],
+          "expected": "Total equipment items metric count completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-224",
+          "name": "Verify Total platform revenue metric display",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Total platform revenue metric display"
+          ],
+          "expected": "Total platform revenue metric display completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-225",
+          "name": "Verify Active deliveries metric count card",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Active deliveries metric count card"
+          ],
+          "expected": "Active deliveries metric count card completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-226",
+          "name": "Verify Revenue line chart monthly axis render",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Revenue line chart monthly axis render"
+          ],
+          "expected": "Revenue line chart monthly axis render completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-227",
+          "name": "Verify User growth bar chart weekly view",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute User growth bar chart weekly view"
+          ],
+          "expected": "User growth bar chart weekly view completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-228",
+          "name": "Verify Quick action shortcuts navigation links",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Quick action shortcuts navigation links"
+          ],
+          "expected": "Quick action shortcuts navigation links completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-229",
+          "name": "Verify Export platform audit logs CSV CTA",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Export platform audit logs CSV CTA"
+          ],
+          "expected": "Export platform audit logs CSV CTA completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-230",
+          "name": "Verify Date range filter on admin dashboard",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Date range filter on admin dashboard"
+          ],
+          "expected": "Date range filter on admin dashboard completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-231",
+          "name": "Verify Platform fee commission percentage card",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Platform fee commission percentage card"
+          ],
+          "expected": "Platform fee commission percentage card completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-232",
+          "name": "Verify Top performing categories chart check",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Top performing categories chart check"
+          ],
+          "expected": "Top performing categories chart check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-233",
+          "name": "Verify System health CPU & memory load meter",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute System health CPU & memory load meter"
+          ],
+          "expected": "System health CPU & memory load meter completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-234",
+          "name": "Verify Database connections status indicator",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Database connections status indicator"
+          ],
+          "expected": "Database connections status indicator completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-235",
+          "name": "Verify Recent activity log audit list scroll",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Recent activity log audit list scroll"
+          ],
+          "expected": "Recent activity log audit list scroll completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-236",
+          "name": "Verify Admin notification center dropdown",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Admin notification center dropdown"
+          ],
+          "expected": "Admin notification center dropdown completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-237",
+          "name": "Verify Admin profile & security settings CTA",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Admin profile & security settings CTA"
+          ],
+          "expected": "Admin profile & security settings CTA completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-238",
+          "name": "Verify Switch environment staging/prod toggle",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Switch environment staging/prod toggle"
+          ],
+          "expected": "Switch environment staging/prod toggle completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-239",
+          "name": "Verify Refresh analytics data button action",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Refresh analytics data button action"
+          ],
+          "expected": "Refresh analytics data button action completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-240",
+          "name": "Verify Print monthly financial summary PDF",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Print monthly financial summary PDF"
+          ],
+          "expected": "Print monthly financial summary PDF completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-241",
+          "name": "Verify User list data renders with role tags",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute User list data renders with role tags"
+          ],
+          "expected": "User list data renders with role tags completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-242",
+          "name": "Verify Filter user list by Customer / Vendor",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Filter user list by Customer / Vendor"
+          ],
+          "expected": "Filter user list by Customer / Vendor completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-243",
+          "name": "Verify Search user by name or email query",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Search user by name or email query"
+          ],
+          "expected": "Search user by name or email query completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-244",
+          "name": "Verify Suspend user account action & confirm",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Suspend user account action & confirm"
+          ],
+          "expected": "Suspend user account action & confirm completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-245",
+          "name": "Verify Reactivate user account action button",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Reactivate user account action button"
+          ],
+          "expected": "Reactivate user account action button completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-246",
+          "name": "Verify Pending vendor registrations list render",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Pending vendor registrations list render"
+          ],
+          "expected": "Pending vendor registrations list render completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-247",
+          "name": "Verify Approve vendor registration action CTA",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Approve vendor registration action CTA"
+          ],
+          "expected": "Approve vendor registration action CTA completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-248",
+          "name": "Verify Reject vendor registration action CTA",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Reject vendor registration action CTA"
+          ],
+          "expected": "Reject vendor registration action CTA completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-249",
+          "name": "Verify Vendor document verification modal",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Vendor document verification modal"
+          ],
+          "expected": "Vendor document verification modal completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-250",
+          "name": "Verify View vendor shop details and pincode",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute View vendor shop details and pincode"
+          ],
+          "expected": "View vendor shop details and pincode completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-251",
+          "name": "Verify Promote customer account to admin role",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Promote customer account to admin role"
+          ],
+          "expected": "Promote customer account to admin role completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-252",
+          "name": "Verify Delete user account permanent prompt",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Delete user account permanent prompt"
+          ],
+          "expected": "Delete user account permanent prompt completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-253",
+          "name": "Verify Vendor commission rate configuration",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Vendor commission rate configuration"
+          ],
+          "expected": "Vendor commission rate configuration completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-254",
+          "name": "Verify Platform dispute resolution ticket list",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Platform dispute resolution ticket list"
+          ],
+          "expected": "Platform dispute resolution ticket list completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-255",
+          "name": "Verify Resolve dispute issue button action",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Resolve dispute issue button action"
+          ],
+          "expected": "Resolve dispute issue button action completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-256",
+          "name": "Verify Send broadcast announcement modal",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Send broadcast announcement modal"
+          ],
+          "expected": "Send broadcast announcement modal completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-257",
+          "name": "Verify Audit log viewer user actions list",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Audit log viewer user actions list"
+          ],
+          "expected": "Audit log viewer user actions list completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-258",
+          "name": "Verify Admin access permissions matrix view",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute Admin access permissions matrix view"
+          ],
+          "expected": "Admin access permissions matrix view completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-259",
+          "name": "Verify IP whitelist management configuration",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute IP whitelist management configuration"
+          ],
+          "expected": "IP whitelist management configuration completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-260",
+          "name": "Verify System feature flags toggle settings",
+          "steps": [
+            "1. Open Admin Module view",
+            "2. Execute System feature flags toggle settings"
+          ],
+          "expected": "System feature flags toggle settings completes as expected",
+          "severity": "Medium"
+        }
+      ]
+    },
+    {
+      "suite": "Shared Features",
+      "tests": [
+        {
+          "id": "TC-261",
+          "name": "Verify Messages screen loads conversation list",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Messages screen loads conversation list"
+          ],
+          "expected": "Messages screen loads conversation list completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-262",
+          "name": "Verify Unread message counter badge render",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Unread message counter badge render"
+          ],
+          "expected": "Unread message counter badge render completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-263",
+          "name": "Verify Open chat detail displays message list",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Open chat detail displays message list"
+          ],
+          "expected": "Open chat detail displays message list completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-264",
+          "name": "Verify Real-time message send appends to list",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Real-time message send appends to list"
+          ],
+          "expected": "Real-time message send appends to list completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-265",
+          "name": "Verify Firestore message sync timestamp check",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Firestore message sync timestamp check"
+          ],
+          "expected": "Firestore message sync timestamp check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-266",
+          "name": "Verify Sender vs receiver message bubble style",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Sender vs receiver message bubble style"
+          ],
+          "expected": "Sender vs receiver message bubble style completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-267",
+          "name": "Verify Image attachment button photo picker",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Image attachment button photo picker"
+          ],
+          "expected": "Image attachment button photo picker completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-268",
+          "name": "Verify Send order reference widget in chat",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Send order reference widget in chat"
+          ],
+          "expected": "Send order reference widget in chat completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-269",
+          "name": "Verify Chat search filter conversation list",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Chat search filter conversation list"
+          ],
+          "expected": "Chat search filter conversation list completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-270",
+          "name": "Verify Delete chat thread action & confirm",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Delete chat thread action & confirm"
+          ],
+          "expected": "Delete chat thread action & confirm completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-271",
+          "name": "Verify Block user chat action confirmation",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Block user chat action confirmation"
+          ],
+          "expected": "Block user chat action confirmation completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-272",
+          "name": "Verify Audio message recording button tap",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Audio message recording button tap"
+          ],
+          "expected": "Audio message recording button tap completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-273",
+          "name": "Verify Message read receipt checkmarks check",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Message read receipt checkmarks check"
+          ],
+          "expected": "Message read receipt checkmarks check completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-274",
+          "name": "Verify Typing indicator status animation",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Typing indicator status animation"
+          ],
+          "expected": "Typing indicator status animation completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-275",
+          "name": "Verify Online / offline status dot display",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Online / offline status dot display"
+          ],
+          "expected": "Online / offline status dot display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-276",
+          "name": "Verify Quick reply auto-suggestion pills",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Quick reply auto-suggestion pills"
+          ],
+          "expected": "Quick reply auto-suggestion pills completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-277",
+          "name": "Verify Scroll to bottom FAB on long thread",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Scroll to bottom FAB on long thread"
+          ],
+          "expected": "Scroll to bottom FAB on long thread completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-278",
+          "name": "Verify System welcome message in new thread",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute System welcome message in new thread"
+          ],
+          "expected": "System welcome message in new thread completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-279",
+          "name": "Verify Vendor response time indicator card",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Vendor response time indicator card"
+          ],
+          "expected": "Vendor response time indicator card completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-280",
+          "name": "Verify Chat backup export file action link",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Chat backup export file action link"
+          ],
+          "expected": "Chat backup export file action link completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-281",
+          "name": "Verify Notifications screen loads order updates",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Notifications screen loads order updates"
+          ],
+          "expected": "Notifications screen loads order updates completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-282",
+          "name": "Verify Empty notifications state placeholder",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Empty notifications state placeholder"
+          ],
+          "expected": "Empty notifications state placeholder completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-283",
+          "name": "Verify Mark notification as read tap action",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Mark notification as read tap action"
+          ],
+          "expected": "Mark notification as read tap action completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-284",
+          "name": "Verify Clear all notifications button prompt",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Clear all notifications button prompt"
+          ],
+          "expected": "Clear all notifications button prompt completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-285",
+          "name": "Verify Notification tap redirects to order detail",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Notification tap redirects to order detail"
+          ],
+          "expected": "Notification tap redirects to order detail completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-286",
+          "name": "Verify Push notification settings toggle check",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Push notification settings toggle check"
+          ],
+          "expected": "Push notification settings toggle check completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-287",
+          "name": "Verify FAQs expansion tile accordion toggle",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute FAQs expansion tile accordion toggle"
+          ],
+          "expected": "FAQs expansion tile accordion toggle completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-288",
+          "name": "Verify FAQ category tab selector navigation",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute FAQ category tab selector navigation"
+          ],
+          "expected": "FAQ category tab selector navigation completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-289",
+          "name": "Verify Search FAQ by key term input check",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Search FAQ by key term input check"
+          ],
+          "expected": "Search FAQ by key term input check completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-290",
+          "name": "Verify Support live chat card click trigger",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Support live chat card click trigger"
+          ],
+          "expected": "Support live chat card click trigger completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-291",
+          "name": "Verify Email support contact form submission",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Email support contact form submission"
+          ],
+          "expected": "Email support contact form submission completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-292",
+          "name": "Verify Call customer care hotline link tap",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Call customer care hotline link tap"
+          ],
+          "expected": "Call customer care hotline link tap completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-293",
+          "name": "Verify App version & build info footer display",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute App version & build info footer display"
+          ],
+          "expected": "App version & build info footer display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-294",
+          "name": "Verify Terms of service webview modal display",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Terms of service webview modal display"
+          ],
+          "expected": "Terms of service webview modal display completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-295",
+          "name": "Verify Privacy policy webview modal display",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Privacy policy webview modal display"
+          ],
+          "expected": "Privacy policy webview modal display completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-296",
+          "name": "Verify Report a bug form submission action",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Report a bug form submission action"
+          ],
+          "expected": "Report a bug form submission action completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-297",
+          "name": "Verify App rating prompt star review CTA",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute App rating prompt star review CTA"
+          ],
+          "expected": "App rating prompt star review CTA completes as expected",
+          "severity": "High"
+        },
+        {
+          "id": "TC-298",
+          "name": "Verify Help center video tutorials list",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Help center video tutorials list"
+          ],
+          "expected": "Help center video tutorials list completes as expected",
+          "severity": "Medium"
+        },
+        {
+          "id": "TC-299",
+          "name": "Verify System maintenance schedule alert",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute System maintenance schedule alert"
+          ],
+          "expected": "System maintenance schedule alert completes as expected",
+          "severity": "Low"
+        },
+        {
+          "id": "TC-300",
+          "name": "Verify Stripe card integration flow check (Production)",
+          "steps": [
+            "1. Open Shared Features view",
+            "2. Execute Stripe card integration flow check (Production)"
+          ],
+          "expected": "Stripe card integration flow check (Production) completes as expected",
+          "severity": "High"
+        }
+      ]
+    }
+  ]
+}

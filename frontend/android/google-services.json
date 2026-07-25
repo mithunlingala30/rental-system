@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "602471582725",
+    "firebase_url": "https://eventsphere-9edf8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "eventsphere-9edf8",
+    "storage_bucket": "eventsphere-9edf8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602471582725:android:39fc18e939eed6235a206c",
+        "android_client_info": {
+          "package_name": "com.example.event"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602471582725-r6vfvnj1g2h439ocrmsgsqg3506pbj08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.event",
+            "certificate_hash": "1056c42db533259a9dbd7d16a3576b444c7b74f4"
+          }
+        },
+        {
+          "client_id": "602471582725-e6h6t5784enjmq0vr7sdlnd9rdb55a7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCak5fxL3zKEUZF70mKuVFcSGn07sOWwAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602471582725-e6h6t5784enjmq0vr7sdlnd9rdb55a7b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "602471582725-c4ge2kb4amtsg6f9bv4mtestavhfe268.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.event"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

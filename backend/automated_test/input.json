@@ -1,0 +1,3105 @@
+{
+  "project": "EventSphere",
+  "version": "1.0.0+1",
+  "base_url": "https://firestore.googleapis.com",
+  "test_users": {
+    "customer": {
+      "email": "customer@test.com",
+      "password": "Test@1234",
+      "role": "Customer"
+    },
+    "vendor": {
+      "email": "vendor@test.com",
+      "password": "Test@1234",
+      "role": "Vendor"
+    },
+    "admin": {
+      "email": "admin@eventsphere.com",
+      "password": "Admin@1234",
+      "role": "Admin"
+    }
+  },
+  "collections": [
+    "users",
+    "orders",
+    "equipment",
+    "chats"
+  ],
+  "test_suites": [
+    {
+      "suite": "Authentication",
+      "tests": [
+        {
+          "id": "BT-001",
+          "name": "Backend Authentication verification test #01 (BT-001)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-002",
+          "name": "Backend Authentication verification test #02 (BT-002)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-003",
+          "name": "Backend Authentication verification test #03 (BT-003)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-004",
+          "name": "Backend Authentication verification test #04 (BT-004)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-005",
+          "name": "Backend Authentication verification test #05 (BT-005)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-006",
+          "name": "Backend Authentication verification test #06 (BT-006)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-007",
+          "name": "Backend Authentication verification test #07 (BT-007)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-008",
+          "name": "Backend Authentication verification test #08 (BT-008)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-009",
+          "name": "Backend Authentication verification test #09 (BT-009)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-010",
+          "name": "Backend Authentication verification test #10 (BT-010)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-011",
+          "name": "Backend Authentication verification test #11 (BT-011)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-012",
+          "name": "Backend Authentication verification test #12 (BT-012)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-013",
+          "name": "Backend Authentication verification test #13 (BT-013)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-014",
+          "name": "Backend Authentication verification test #14 (BT-014)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-015",
+          "name": "Backend Authentication verification test #15 (BT-015)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-016",
+          "name": "Backend Authentication verification test #16 (BT-016)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-017",
+          "name": "Backend Authentication verification test #17 (BT-017)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-018",
+          "name": "Backend Authentication verification test #18 (BT-018)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-019",
+          "name": "Backend Authentication verification test #19 (BT-019)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-020",
+          "name": "Backend Authentication verification test #20 (BT-020)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "User Profile (Firestore)",
+      "tests": [
+        {
+          "id": "BT-021",
+          "name": "Backend User Profile (Firestore) verification test #01 (BT-021)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-022",
+          "name": "Backend User Profile (Firestore) verification test #02 (BT-022)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-023",
+          "name": "Backend User Profile (Firestore) verification test #03 (BT-023)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-024",
+          "name": "Backend User Profile (Firestore) verification test #04 (BT-024)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-025",
+          "name": "Backend User Profile (Firestore) verification test #05 (BT-025)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-026",
+          "name": "Backend User Profile (Firestore) verification test #06 (BT-026)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-027",
+          "name": "Backend User Profile (Firestore) verification test #07 (BT-027)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-028",
+          "name": "Backend User Profile (Firestore) verification test #08 (BT-028)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-029",
+          "name": "Backend User Profile (Firestore) verification test #09 (BT-029)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-030",
+          "name": "Backend User Profile (Firestore) verification test #10 (BT-030)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-031",
+          "name": "Backend User Profile (Firestore) verification test #11 (BT-031)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-032",
+          "name": "Backend User Profile (Firestore) verification test #12 (BT-032)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-033",
+          "name": "Backend User Profile (Firestore) verification test #13 (BT-033)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-034",
+          "name": "Backend User Profile (Firestore) verification test #14 (BT-034)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-035",
+          "name": "Backend User Profile (Firestore) verification test #15 (BT-035)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-036",
+          "name": "Backend User Profile (Firestore) verification test #16 (BT-036)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-037",
+          "name": "Backend User Profile (Firestore) verification test #17 (BT-037)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-038",
+          "name": "Backend User Profile (Firestore) verification test #18 (BT-038)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-039",
+          "name": "Backend User Profile (Firestore) verification test #19 (BT-039)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-040",
+          "name": "Backend User Profile (Firestore) verification test #20 (BT-040)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Equipment (Firestore)",
+      "tests": [
+        {
+          "id": "BT-041",
+          "name": "Backend Equipment (Firestore) verification test #01 (BT-041)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-042",
+          "name": "Backend Equipment (Firestore) verification test #02 (BT-042)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-043",
+          "name": "Backend Equipment (Firestore) verification test #03 (BT-043)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-044",
+          "name": "Backend Equipment (Firestore) verification test #04 (BT-044)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-045",
+          "name": "Backend Equipment (Firestore) verification test #05 (BT-045)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-046",
+          "name": "Backend Equipment (Firestore) verification test #06 (BT-046)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-047",
+          "name": "Backend Equipment (Firestore) verification test #07 (BT-047)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-048",
+          "name": "Backend Equipment (Firestore) verification test #08 (BT-048)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-049",
+          "name": "Backend Equipment (Firestore) verification test #09 (BT-049)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-050",
+          "name": "Backend Equipment (Firestore) verification test #10 (BT-050)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-051",
+          "name": "Backend Equipment (Firestore) verification test #11 (BT-051)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-052",
+          "name": "Backend Equipment (Firestore) verification test #12 (BT-052)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-053",
+          "name": "Backend Equipment (Firestore) verification test #13 (BT-053)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-054",
+          "name": "Backend Equipment (Firestore) verification test #14 (BT-054)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-055",
+          "name": "Backend Equipment (Firestore) verification test #15 (BT-055)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-056",
+          "name": "Backend Equipment (Firestore) verification test #16 (BT-056)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-057",
+          "name": "Backend Equipment (Firestore) verification test #17 (BT-057)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-058",
+          "name": "Backend Equipment (Firestore) verification test #18 (BT-058)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-059",
+          "name": "Backend Equipment (Firestore) verification test #19 (BT-059)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-060",
+          "name": "Backend Equipment (Firestore) verification test #20 (BT-060)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Orders (Firestore)",
+      "tests": [
+        {
+          "id": "BT-061",
+          "name": "Backend Orders (Firestore) verification test #01 (BT-061)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-062",
+          "name": "Backend Orders (Firestore) verification test #02 (BT-062)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-063",
+          "name": "Backend Orders (Firestore) verification test #03 (BT-063)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-064",
+          "name": "Backend Orders (Firestore) verification test #04 (BT-064)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-065",
+          "name": "Backend Orders (Firestore) verification test #05 (BT-065)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-066",
+          "name": "Backend Orders (Firestore) verification test #06 (BT-066)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-067",
+          "name": "Backend Orders (Firestore) verification test #07 (BT-067)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-068",
+          "name": "Backend Orders (Firestore) verification test #08 (BT-068)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-069",
+          "name": "Backend Orders (Firestore) verification test #09 (BT-069)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-070",
+          "name": "Backend Orders (Firestore) verification test #10 (BT-070)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-071",
+          "name": "Backend Orders (Firestore) verification test #11 (BT-071)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-072",
+          "name": "Backend Orders (Firestore) verification test #12 (BT-072)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-073",
+          "name": "Backend Orders (Firestore) verification test #13 (BT-073)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-074",
+          "name": "Backend Orders (Firestore) verification test #14 (BT-074)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-075",
+          "name": "Backend Orders (Firestore) verification test #15 (BT-075)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-076",
+          "name": "Backend Orders (Firestore) verification test #16 (BT-076)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-077",
+          "name": "Backend Orders (Firestore) verification test #17 (BT-077)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-078",
+          "name": "Backend Orders (Firestore) verification test #18 (BT-078)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-079",
+          "name": "Backend Orders (Firestore) verification test #19 (BT-079)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-080",
+          "name": "Backend Orders (Firestore) verification test #20 (BT-080)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Chat (Firestore)",
+      "tests": [
+        {
+          "id": "BT-081",
+          "name": "Backend Chat (Firestore) verification test #01 (BT-081)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-082",
+          "name": "Backend Chat (Firestore) verification test #02 (BT-082)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-083",
+          "name": "Backend Chat (Firestore) verification test #03 (BT-083)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-084",
+          "name": "Backend Chat (Firestore) verification test #04 (BT-084)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-085",
+          "name": "Backend Chat (Firestore) verification test #05 (BT-085)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-086",
+          "name": "Backend Chat (Firestore) verification test #06 (BT-086)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-087",
+          "name": "Backend Chat (Firestore) verification test #07 (BT-087)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-088",
+          "name": "Backend Chat (Firestore) verification test #08 (BT-088)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-089",
+          "name": "Backend Chat (Firestore) verification test #09 (BT-089)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-090",
+          "name": "Backend Chat (Firestore) verification test #10 (BT-090)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-091",
+          "name": "Backend Chat (Firestore) verification test #11 (BT-091)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-092",
+          "name": "Backend Chat (Firestore) verification test #12 (BT-092)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-093",
+          "name": "Backend Chat (Firestore) verification test #13 (BT-093)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-094",
+          "name": "Backend Chat (Firestore) verification test #14 (BT-094)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-095",
+          "name": "Backend Chat (Firestore) verification test #15 (BT-095)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-096",
+          "name": "Backend Chat (Firestore) verification test #16 (BT-096)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-097",
+          "name": "Backend Chat (Firestore) verification test #17 (BT-097)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-098",
+          "name": "Backend Chat (Firestore) verification test #18 (BT-098)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-099",
+          "name": "Backend Chat (Firestore) verification test #19 (BT-099)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-100",
+          "name": "Backend Chat (Firestore) verification test #20 (BT-100)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Data Model Validation",
+      "tests": [
+        {
+          "id": "BT-101",
+          "name": "Backend Data Model Validation verification test #01 (BT-101)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-102",
+          "name": "Backend Data Model Validation verification test #02 (BT-102)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-103",
+          "name": "Backend Data Model Validation verification test #03 (BT-103)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-104",
+          "name": "Backend Data Model Validation verification test #04 (BT-104)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-105",
+          "name": "Backend Data Model Validation verification test #05 (BT-105)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-106",
+          "name": "Backend Data Model Validation verification test #06 (BT-106)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-107",
+          "name": "Backend Data Model Validation verification test #07 (BT-107)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-108",
+          "name": "Backend Data Model Validation verification test #08 (BT-108)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-109",
+          "name": "Backend Data Model Validation verification test #09 (BT-109)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-110",
+          "name": "Backend Data Model Validation verification test #10 (BT-110)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-111",
+          "name": "Backend Data Model Validation verification test #11 (BT-111)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-112",
+          "name": "Backend Data Model Validation verification test #12 (BT-112)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-113",
+          "name": "Backend Data Model Validation verification test #13 (BT-113)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-114",
+          "name": "Backend Data Model Validation verification test #14 (BT-114)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-115",
+          "name": "Backend Data Model Validation verification test #15 (BT-115)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-116",
+          "name": "Backend Data Model Validation verification test #16 (BT-116)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-117",
+          "name": "Backend Data Model Validation verification test #17 (BT-117)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-118",
+          "name": "Backend Data Model Validation verification test #18 (BT-118)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-119",
+          "name": "Backend Data Model Validation verification test #19 (BT-119)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-120",
+          "name": "Backend Data Model Validation verification test #20 (BT-120)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Firestore Security Rules",
+      "tests": [
+        {
+          "id": "BT-121",
+          "name": "Backend Firestore Security Rules verification test #01 (BT-121)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-122",
+          "name": "Backend Firestore Security Rules verification test #02 (BT-122)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-123",
+          "name": "Backend Firestore Security Rules verification test #03 (BT-123)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-124",
+          "name": "Backend Firestore Security Rules verification test #04 (BT-124)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-125",
+          "name": "Backend Firestore Security Rules verification test #05 (BT-125)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-126",
+          "name": "Backend Firestore Security Rules verification test #06 (BT-126)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-127",
+          "name": "Backend Firestore Security Rules verification test #07 (BT-127)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-128",
+          "name": "Backend Firestore Security Rules verification test #08 (BT-128)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-129",
+          "name": "Backend Firestore Security Rules verification test #09 (BT-129)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-130",
+          "name": "Backend Firestore Security Rules verification test #10 (BT-130)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-131",
+          "name": "Backend Firestore Security Rules verification test #11 (BT-131)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-132",
+          "name": "Backend Firestore Security Rules verification test #12 (BT-132)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-133",
+          "name": "Backend Firestore Security Rules verification test #13 (BT-133)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-134",
+          "name": "Backend Firestore Security Rules verification test #14 (BT-134)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-135",
+          "name": "Backend Firestore Security Rules verification test #15 (BT-135)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-136",
+          "name": "Backend Firestore Security Rules verification test #16 (BT-136)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-137",
+          "name": "Backend Firestore Security Rules verification test #17 (BT-137)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-138",
+          "name": "Backend Firestore Security Rules verification test #18 (BT-138)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-139",
+          "name": "Backend Firestore Security Rules verification test #19 (BT-139)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-140",
+          "name": "Backend Firestore Security Rules verification test #20 (BT-140)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Business Logic & Edge Cases",
+      "tests": [
+        {
+          "id": "BT-141",
+          "name": "Backend Business Logic & Edge Cases verification test #01 (BT-141)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-142",
+          "name": "Backend Business Logic & Edge Cases verification test #02 (BT-142)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-143",
+          "name": "Backend Business Logic & Edge Cases verification test #03 (BT-143)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-144",
+          "name": "Backend Business Logic & Edge Cases verification test #04 (BT-144)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-145",
+          "name": "Backend Business Logic & Edge Cases verification test #05 (BT-145)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-146",
+          "name": "Backend Business Logic & Edge Cases verification test #06 (BT-146)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-147",
+          "name": "Backend Business Logic & Edge Cases verification test #07 (BT-147)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-148",
+          "name": "Backend Business Logic & Edge Cases verification test #08 (BT-148)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-149",
+          "name": "Backend Business Logic & Edge Cases verification test #09 (BT-149)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-150",
+          "name": "Backend Business Logic & Edge Cases verification test #10 (BT-150)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-151",
+          "name": "Backend Business Logic & Edge Cases verification test #11 (BT-151)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-152",
+          "name": "Backend Business Logic & Edge Cases verification test #12 (BT-152)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-153",
+          "name": "Backend Business Logic & Edge Cases verification test #13 (BT-153)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-154",
+          "name": "Backend Business Logic & Edge Cases verification test #14 (BT-154)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-155",
+          "name": "Backend Business Logic & Edge Cases verification test #15 (BT-155)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-156",
+          "name": "Backend Business Logic & Edge Cases verification test #16 (BT-156)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-157",
+          "name": "Backend Business Logic & Edge Cases verification test #17 (BT-157)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-158",
+          "name": "Backend Business Logic & Edge Cases verification test #18 (BT-158)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-159",
+          "name": "Backend Business Logic & Edge Cases verification test #19 (BT-159)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-160",
+          "name": "Backend Business Logic & Edge Cases verification test #20 (BT-160)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Router & Auth Guards",
+      "tests": [
+        {
+          "id": "BT-161",
+          "name": "Backend Router & Auth Guards verification test #01 (BT-161)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-162",
+          "name": "Backend Router & Auth Guards verification test #02 (BT-162)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-163",
+          "name": "Backend Router & Auth Guards verification test #03 (BT-163)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-164",
+          "name": "Backend Router & Auth Guards verification test #04 (BT-164)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-165",
+          "name": "Backend Router & Auth Guards verification test #05 (BT-165)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-166",
+          "name": "Backend Router & Auth Guards verification test #06 (BT-166)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-167",
+          "name": "Backend Router & Auth Guards verification test #07 (BT-167)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-168",
+          "name": "Backend Router & Auth Guards verification test #08 (BT-168)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-169",
+          "name": "Backend Router & Auth Guards verification test #09 (BT-169)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-170",
+          "name": "Backend Router & Auth Guards verification test #10 (BT-170)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-171",
+          "name": "Backend Router & Auth Guards verification test #11 (BT-171)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-172",
+          "name": "Backend Router & Auth Guards verification test #12 (BT-172)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-173",
+          "name": "Backend Router & Auth Guards verification test #13 (BT-173)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-174",
+          "name": "Backend Router & Auth Guards verification test #14 (BT-174)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-175",
+          "name": "Backend Router & Auth Guards verification test #15 (BT-175)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-176",
+          "name": "Backend Router & Auth Guards verification test #16 (BT-176)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-177",
+          "name": "Backend Router & Auth Guards verification test #17 (BT-177)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-178",
+          "name": "Backend Router & Auth Guards verification test #18 (BT-178)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-179",
+          "name": "Backend Router & Auth Guards verification test #19 (BT-179)",
+          "method": "GET",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-180",
+          "name": "Backend Router & Auth Guards verification test #20 (BT-180)",
+          "method": "POST",
+          "endpoint": "signUp",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Stream & Real-Time Behaviour",
+      "tests": [
+        {
+          "id": "BT-181",
+          "name": "Backend Stream & Real-Time Behaviour verification test #01 (BT-181)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-182",
+          "name": "Backend Stream & Real-Time Behaviour verification test #02 (BT-182)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-183",
+          "name": "Backend Stream & Real-Time Behaviour verification test #03 (BT-183)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-184",
+          "name": "Backend Stream & Real-Time Behaviour verification test #04 (BT-184)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-185",
+          "name": "Backend Stream & Real-Time Behaviour verification test #05 (BT-185)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-186",
+          "name": "Backend Stream & Real-Time Behaviour verification test #06 (BT-186)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-187",
+          "name": "Backend Stream & Real-Time Behaviour verification test #07 (BT-187)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-188",
+          "name": "Backend Stream & Real-Time Behaviour verification test #08 (BT-188)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-189",
+          "name": "Backend Stream & Real-Time Behaviour verification test #09 (BT-189)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-190",
+          "name": "Backend Stream & Real-Time Behaviour verification test #10 (BT-190)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-191",
+          "name": "Backend Stream & Real-Time Behaviour verification test #11 (BT-191)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-192",
+          "name": "Backend Stream & Real-Time Behaviour verification test #12 (BT-192)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-193",
+          "name": "Backend Stream & Real-Time Behaviour verification test #13 (BT-193)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-194",
+          "name": "Backend Stream & Real-Time Behaviour verification test #14 (BT-194)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-195",
+          "name": "Backend Stream & Real-Time Behaviour verification test #15 (BT-195)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-196",
+          "name": "Backend Stream & Real-Time Behaviour verification test #16 (BT-196)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-197",
+          "name": "Backend Stream & Real-Time Behaviour verification test #17 (BT-197)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-198",
+          "name": "Backend Stream & Real-Time Behaviour verification test #18 (BT-198)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-199",
+          "name": "Backend Stream & Real-Time Behaviour verification test #19 (BT-199)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-200",
+          "name": "Backend Stream & Real-Time Behaviour verification test #20 (BT-200)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Vendor Operations & Isolation",
+      "tests": [
+        {
+          "id": "BT-201",
+          "name": "Backend Vendor Operations & Isolation verification test #01 (BT-201)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-202",
+          "name": "Backend Vendor Operations & Isolation verification test #02 (BT-202)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-203",
+          "name": "Backend Vendor Operations & Isolation verification test #03 (BT-203)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-204",
+          "name": "Backend Vendor Operations & Isolation verification test #04 (BT-204)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-205",
+          "name": "Backend Vendor Operations & Isolation verification test #05 (BT-205)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-206",
+          "name": "Backend Vendor Operations & Isolation verification test #06 (BT-206)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-207",
+          "name": "Backend Vendor Operations & Isolation verification test #07 (BT-207)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-208",
+          "name": "Backend Vendor Operations & Isolation verification test #08 (BT-208)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-209",
+          "name": "Backend Vendor Operations & Isolation verification test #09 (BT-209)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-210",
+          "name": "Backend Vendor Operations & Isolation verification test #10 (BT-210)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-211",
+          "name": "Backend Vendor Operations & Isolation verification test #11 (BT-211)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-212",
+          "name": "Backend Vendor Operations & Isolation verification test #12 (BT-212)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-213",
+          "name": "Backend Vendor Operations & Isolation verification test #13 (BT-213)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-214",
+          "name": "Backend Vendor Operations & Isolation verification test #14 (BT-214)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-215",
+          "name": "Backend Vendor Operations & Isolation verification test #15 (BT-215)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-216",
+          "name": "Backend Vendor Operations & Isolation verification test #16 (BT-216)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-217",
+          "name": "Backend Vendor Operations & Isolation verification test #17 (BT-217)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-218",
+          "name": "Backend Vendor Operations & Isolation verification test #18 (BT-218)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-219",
+          "name": "Backend Vendor Operations & Isolation verification test #19 (BT-219)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-220",
+          "name": "Backend Vendor Operations & Isolation verification test #20 (BT-220)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Admin Governance & Aggregations",
+      "tests": [
+        {
+          "id": "BT-221",
+          "name": "Backend Admin Governance & Aggregations verification test #01 (BT-221)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-222",
+          "name": "Backend Admin Governance & Aggregations verification test #02 (BT-222)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-223",
+          "name": "Backend Admin Governance & Aggregations verification test #03 (BT-223)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-224",
+          "name": "Backend Admin Governance & Aggregations verification test #04 (BT-224)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-225",
+          "name": "Backend Admin Governance & Aggregations verification test #05 (BT-225)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-226",
+          "name": "Backend Admin Governance & Aggregations verification test #06 (BT-226)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-227",
+          "name": "Backend Admin Governance & Aggregations verification test #07 (BT-227)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-228",
+          "name": "Backend Admin Governance & Aggregations verification test #08 (BT-228)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-229",
+          "name": "Backend Admin Governance & Aggregations verification test #09 (BT-229)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-230",
+          "name": "Backend Admin Governance & Aggregations verification test #10 (BT-230)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-231",
+          "name": "Backend Admin Governance & Aggregations verification test #11 (BT-231)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-232",
+          "name": "Backend Admin Governance & Aggregations verification test #12 (BT-232)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-233",
+          "name": "Backend Admin Governance & Aggregations verification test #13 (BT-233)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-234",
+          "name": "Backend Admin Governance & Aggregations verification test #14 (BT-234)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-235",
+          "name": "Backend Admin Governance & Aggregations verification test #15 (BT-235)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-236",
+          "name": "Backend Admin Governance & Aggregations verification test #16 (BT-236)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-237",
+          "name": "Backend Admin Governance & Aggregations verification test #17 (BT-237)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-238",
+          "name": "Backend Admin Governance & Aggregations verification test #18 (BT-238)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-239",
+          "name": "Backend Admin Governance & Aggregations verification test #19 (BT-239)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-240",
+          "name": "Backend Admin Governance & Aggregations verification test #20 (BT-240)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Cart Service & Tax Rules",
+      "tests": [
+        {
+          "id": "BT-241",
+          "name": "Backend Cart Service & Tax Rules verification test #01 (BT-241)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-242",
+          "name": "Backend Cart Service & Tax Rules verification test #02 (BT-242)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-243",
+          "name": "Backend Cart Service & Tax Rules verification test #03 (BT-243)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-244",
+          "name": "Backend Cart Service & Tax Rules verification test #04 (BT-244)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-245",
+          "name": "Backend Cart Service & Tax Rules verification test #05 (BT-245)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-246",
+          "name": "Backend Cart Service & Tax Rules verification test #06 (BT-246)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-247",
+          "name": "Backend Cart Service & Tax Rules verification test #07 (BT-247)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-248",
+          "name": "Backend Cart Service & Tax Rules verification test #08 (BT-248)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-249",
+          "name": "Backend Cart Service & Tax Rules verification test #09 (BT-249)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-250",
+          "name": "Backend Cart Service & Tax Rules verification test #10 (BT-250)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-251",
+          "name": "Backend Cart Service & Tax Rules verification test #11 (BT-251)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-252",
+          "name": "Backend Cart Service & Tax Rules verification test #12 (BT-252)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-253",
+          "name": "Backend Cart Service & Tax Rules verification test #13 (BT-253)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-254",
+          "name": "Backend Cart Service & Tax Rules verification test #14 (BT-254)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-255",
+          "name": "Backend Cart Service & Tax Rules verification test #15 (BT-255)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-256",
+          "name": "Backend Cart Service & Tax Rules verification test #16 (BT-256)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-257",
+          "name": "Backend Cart Service & Tax Rules verification test #17 (BT-257)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-258",
+          "name": "Backend Cart Service & Tax Rules verification test #18 (BT-258)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-259",
+          "name": "Backend Cart Service & Tax Rules verification test #19 (BT-259)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-260",
+          "name": "Backend Cart Service & Tax Rules verification test #20 (BT-260)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Negative & Boundary Tests",
+      "tests": [
+        {
+          "id": "BT-261",
+          "name": "Backend Negative & Boundary Tests verification test #01 (BT-261)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-262",
+          "name": "Backend Negative & Boundary Tests verification test #02 (BT-262)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-263",
+          "name": "Backend Negative & Boundary Tests verification test #03 (BT-263)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-264",
+          "name": "Backend Negative & Boundary Tests verification test #04 (BT-264)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-265",
+          "name": "Backend Negative & Boundary Tests verification test #05 (BT-265)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-266",
+          "name": "Backend Negative & Boundary Tests verification test #06 (BT-266)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-267",
+          "name": "Backend Negative & Boundary Tests verification test #07 (BT-267)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-268",
+          "name": "Backend Negative & Boundary Tests verification test #08 (BT-268)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-269",
+          "name": "Backend Negative & Boundary Tests verification test #09 (BT-269)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-270",
+          "name": "Backend Negative & Boundary Tests verification test #10 (BT-270)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-271",
+          "name": "Backend Negative & Boundary Tests verification test #11 (BT-271)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-272",
+          "name": "Backend Negative & Boundary Tests verification test #12 (BT-272)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-273",
+          "name": "Backend Negative & Boundary Tests verification test #13 (BT-273)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-274",
+          "name": "Backend Negative & Boundary Tests verification test #14 (BT-274)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-275",
+          "name": "Backend Negative & Boundary Tests verification test #15 (BT-275)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-276",
+          "name": "Backend Negative & Boundary Tests verification test #16 (BT-276)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-277",
+          "name": "Backend Negative & Boundary Tests verification test #17 (BT-277)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-278",
+          "name": "Backend Negative & Boundary Tests verification test #18 (BT-278)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-279",
+          "name": "Backend Negative & Boundary Tests verification test #19 (BT-279)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-280",
+          "name": "Backend Negative & Boundary Tests verification test #20 (BT-280)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    },
+    {
+      "suite": "Performance & Memory Safety",
+      "tests": [
+        {
+          "id": "BT-281",
+          "name": "Backend Performance & Memory Safety verification test #01 (BT-281)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_1"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-282",
+          "name": "Backend Performance & Memory Safety verification test #02 (BT-282)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_2"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-283",
+          "name": "Backend Performance & Memory Safety verification test #03 (BT-283)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_3"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-284",
+          "name": "Backend Performance & Memory Safety verification test #04 (BT-284)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_4"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-285",
+          "name": "Backend Performance & Memory Safety verification test #05 (BT-285)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_5"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-286",
+          "name": "Backend Performance & Memory Safety verification test #06 (BT-286)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_6"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-287",
+          "name": "Backend Performance & Memory Safety verification test #07 (BT-287)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_7"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-288",
+          "name": "Backend Performance & Memory Safety verification test #08 (BT-288)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_8"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-289",
+          "name": "Backend Performance & Memory Safety verification test #09 (BT-289)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_9"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-290",
+          "name": "Backend Performance & Memory Safety verification test #10 (BT-290)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_10"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-291",
+          "name": "Backend Performance & Memory Safety verification test #11 (BT-291)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_11"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-292",
+          "name": "Backend Performance & Memory Safety verification test #12 (BT-292)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_12"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-293",
+          "name": "Backend Performance & Memory Safety verification test #13 (BT-293)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_13"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-294",
+          "name": "Backend Performance & Memory Safety verification test #14 (BT-294)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_14"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-295",
+          "name": "Backend Performance & Memory Safety verification test #15 (BT-295)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_15"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-296",
+          "name": "Backend Performance & Memory Safety verification test #16 (BT-296)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_16"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-297",
+          "name": "Backend Performance & Memory Safety verification test #17 (BT-297)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_17"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-298",
+          "name": "Backend Performance & Memory Safety verification test #18 (BT-298)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_18"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-299",
+          "name": "Backend Performance & Memory Safety verification test #19 (BT-299)",
+          "method": "GET",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_19"
+          },
+          "expected_status": 200
+        },
+        {
+          "id": "BT-300",
+          "name": "Backend Performance & Memory Safety verification test #20 (BT-300)",
+          "method": "POST",
+          "endpoint": "firestore",
+          "payload": {
+            "test_key": "value_20"
+          },
+          "expected_status": 200
+        }
+      ]
+    }
+  ]
+}
