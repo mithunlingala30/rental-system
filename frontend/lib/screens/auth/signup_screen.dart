@@ -65,7 +65,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
           pincode: _role == 'Vendor' ? _pincodeCtrl.text.trim() : null,
         );
         await service.updateUserProfile(userModel);
-        await PushNotificationService().onUserLogin();
+        try {
+          await PushNotificationService().onUserLogin();
+        } catch (e) {
+          debugPrint('Warning: Could not complete push notification setup on signup: $e');
+        }
 
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -74,10 +78,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
           context.go('/home');
         }
       }
-    } on FirebaseAuthException catch (e) {
+    } catch (e) {
       if (mounted) {
+        final message = e is FirebaseAuthException
+            ? (e.message ?? 'An error occurred during account creation')
+            : e.toString();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.message ?? 'An error occurred'), backgroundColor: AppColors.danger),
+          SnackBar(content: Text(message), backgroundColor: AppColors.danger),
         );
       }
     } finally {

@@ -20,6 +20,8 @@ Map<String, dynamic> _orderToNotif(OrderModel order, {required bool isVendor}) {
       'title': 'New Order Received',
       'body': '${order.customerName} placed an order for ${order.items.map((i) => i.name).join(', ')}.',
       'time': _timeAgo(order.createdAt),
+      'orderId': order.id,
+      'isVendor': isVendor,
     };
   }
 
@@ -43,6 +45,8 @@ Map<String, dynamic> _orderToNotif(OrderModel order, {required bool isVendor}) {
     'title': entry.$3,
     'body':  'Order #${order.id.substring(0, 8).toUpperCase()} — $itemNames',
     'time':  _timeAgo(order.createdAt),
+    'orderId': order.id,
+    'isVendor': isVendor,
   };
 }
 
@@ -118,6 +122,8 @@ class NotificationsScreen extends StatelessWidget {
                               'time': n['createdAt'] != null
                                   ? _timeAgo(DateTime.tryParse(n['createdAt'] as String) ?? DateTime.now())
                                   : 'just now',
+                              'orderId': n['orderId'] as String?,
+                              'isVendor': isVendor,
                             });
                           }
 
@@ -161,10 +167,24 @@ class NotificationsScreen extends StatelessWidget {
                             itemCount: notifItems.length,
                             itemBuilder: (_, i) {
                               final n = notifItems[i];
+                              final orderId = n['orderId'] as String?;
+                              final notifIsVendor = n['isVendor'] as bool? ?? false;
+
+                              void handleTap() {
+                                if (orderId != null && orderId.isNotEmpty) {
+                                  if (notifIsVendor) {
+                                    context.go('/vendor-orders');
+                                  } else {
+                                    context.push('/order-tracking', extra: orderId);
+                                  }
+                                }
+                              }
+
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 12),
                                 child: GlassCard(
                                   padding: const EdgeInsets.all(16),
+                                  onTap: (orderId != null && orderId.isNotEmpty) ? handleTap : null,
                                   child: Row(
                                     children: [
                                       Container(
@@ -212,6 +232,12 @@ class NotificationsScreen extends StatelessWidget {
                                           ],
                                         ),
                                       ),
+                                      if (orderId != null && orderId.isNotEmpty)
+                                        const Padding(
+                                          padding: EdgeInsets.only(left: 8),
+                                          child: Icon(Icons.chevron_right_rounded,
+                                              color: AppColors.textSecondary, size: 20),
+                                        ),
                                     ],
                                   ),
                                 ),

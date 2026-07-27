@@ -13,10 +13,10 @@ class FirebaseService {
   
   Future<String> placeOrder(OrderModel order) async {
     final docRef = _db.collection('orders').doc();
-    final orderWithId = order.toMap();
     final uid = _auth.currentUser?.uid ?? '';
+    final orderWithId = order.toMap();
     orderWithId['id'] = docRef.id;
-    orderWithId['customerId'] = uid;
+    orderWithId['customerId'] = order.customerId.isNotEmpty ? order.customerId : uid;
     await docRef.set(orderWithId);
 
     // Send push notification & save to Notifications screen
@@ -51,28 +51,28 @@ class FirebaseService {
 
   /// Orders that belong to the logged-in customer.
   /// Matches on the `customerId` field (UID stored at order-placement time).
-  /// Orders without a `customerId` field are excluded.
   Stream<List<OrderModel>> getCustomerOrders(String uid) {
+    if (uid.isEmpty) return Stream.value([]);
     return _db.collection('orders').snapshots().map((s) {
-      final list = s.docs.map((d) => OrderModel.fromMap(d.data(), d.id)).toList();
-      final filtered = (uid.isNotEmpty && list.any((o) => (o.toMap()['customerId'] ?? '') == uid))
-          ? list.where((o) => (o.toMap()['customerId'] ?? '') == uid).toList()
-          : list;
-      filtered.sort((a, b) => b.createdAt.compareTo(a.createdAt));
-      return filtered;
+      final list = s.docs
+          .map((d) => OrderModel.fromMap(d.data(), d.id))
+          .where((o) => o.customerId == uid)
+          .toList();
+      list.sort((a, b) => b.createdAt.compareTo(a.createdAt));
+      return list;
     });
   }
 
+  /// Orders that belong to the specified vendor.
   Stream<List<OrderModel>> getOrdersForVendor(String vendorId) {
+    if (vendorId.isEmpty) return Stream.value([]);
     return _db.collection('orders').snapshots().map((s) {
-      final list = s.docs.map((d) => OrderModel.fromMap(d.data(), d.id)).toList();
-      
-      final matches = (vendorId.isNotEmpty && list.any((o) => o.vendorId == vendorId))
-          ? list.where((o) => o.vendorId == vendorId || o.vendorId.isEmpty || o.vendorId.startsWith('mock_')).toList()
-          : list;
-
-      matches.sort((a, b) => b.createdAt.compareTo(a.createdAt));
-      return matches;
+      final list = s.docs
+          .map((d) => OrderModel.fromMap(d.data(), d.id))
+          .where((o) => o.vendorId == vendorId)
+          .toList();
+      list.sort((a, b) => b.createdAt.compareTo(a.createdAt));
+      return list;
     });
   }
 
@@ -399,5 +399,33 @@ class FirebaseService {
     await batch.commit();
   }
 
+  Future<void> clearChatMessages(String chatId) async {
+    final chatRef = _db.collection('chats').doc(chatId);
+    final messagesSnapshot = await chatRef.collection('messages').get();
+
+    final batch = _db.batch();
+    for (final doc in messagesSnapshot.docs) {
+      batch.delete(doc.reference);
+    }
+    batch.update(chatRef, {
+      'lastMessage': '',
+      'lastMessageTime': DateTime.now().toIso8601String(),
+    });
+
+    await batch.commit();
+  }
+
+  Future<void> deleteChat(String chatId) async {
+    final chatRef = _db.collection('chats').doc(chatId);
+    final messagesSnapshot = await chatRef.collection('messages').get();
+
+    final batch = _db.batch();
+    for (final doc in messagesSnapshot.docs) {
+      batch.delete(doc.reference);
+    }
+    batch.delete(chatRef);
+
+    await batch.commit();
+  }
 }
 

@@ -13,6 +13,7 @@ class OrderModel {
   final double total;
   final String status;
   final DateTime createdAt;
+  final String customerId;
   // Vendor-facing fields
   final String vendorId;
   final int trackingStep;   // 0=Placed,1=Confirmed,2=Prepared,3=Out for Delivery,4=Delivered
@@ -35,6 +36,7 @@ class OrderModel {
     required this.total,
     required this.status,
     required this.createdAt,
+    this.customerId = '',
     this.vendorId = '',
     this.trackingStep = 0,
     this.trackingNote = '',
@@ -46,6 +48,7 @@ class OrderModel {
   Map<String, dynamic> toMap() {
     return {
       'id': id,
+      'customerId': customerId,
       'customerName': customerName,
       'phone': phone,
       'address': address,
@@ -69,6 +72,7 @@ class OrderModel {
   factory OrderModel.fromMap(Map<String, dynamic> map, String id) {
     return OrderModel(
       id: id,
+      customerId: map['customerId'] ?? map['userId'] ?? '',
       customerName: map['customerName'] ?? '',
       phone: map['phone'] ?? '',
       address: map['address'] ?? '',

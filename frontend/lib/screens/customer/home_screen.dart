@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../../theme/app_theme.dart';
 import '../../services/firebase_service.dart';
+import '../../services/push_notification_service.dart';
 import '../../models/user_model.dart';
 import '../../models/order_model.dart';
 
@@ -89,10 +91,27 @@ class _CustomerDashboard extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () => context.go('/notifications'),
-              icon: const Badge(
-                label: Text('3'),
-                child: Icon(Icons.notifications_none_rounded,
-                    color: Colors.white, size: 26),
+              icon: StreamBuilder<int>(
+                stream: PushNotificationService().getUnreadNotificationCount(
+                  FirebaseAuth.instance.currentUser?.uid ?? '',
+                ),
+                builder: (context, snap) {
+                  final count = snap.data ?? 0;
+                  return Badge(
+                    isLabelVisible: count > 0,
+                    label: Text(
+                      '$count',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    backgroundColor: Colors.green,
+                    child: const Icon(Icons.notifications_none_rounded,
+                        color: Colors.white, size: 26),
+                  );
+                },
               ),
             ),
             GestureDetector(
@@ -529,10 +548,27 @@ class _VendorDashboard extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () => context.go('/notifications'),
-                          icon: const Badge(
-                            label: Text('2'),
-                            child: Icon(Icons.notifications_none_rounded,
-                                color: Colors.white, size: 26),
+                          icon: StreamBuilder<int>(
+                            stream: PushNotificationService().getUnreadNotificationCount(
+                              FirebaseAuth.instance.currentUser?.uid ?? '',
+                            ),
+                            builder: (context, snap) {
+                              final count = snap.data ?? 0;
+                              return Badge(
+                                isLabelVisible: count > 0,
+                                label: Text(
+                                  '$count',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                backgroundColor: Colors.green,
+                                child: const Icon(Icons.notifications_none_rounded,
+                                    color: Colors.white, size: 26),
+                              );
+                            },
                           ),
                         ),
                         GestureDetector(

@@ -3,9 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/widgets.dart';
-import '../../services/firebase_service.dart';
 import '../../services/push_notification_service.dart';
-import '../../models/user_model.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,6 +20,13 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _remember = false;
   bool _loading = false;
 
+  @override
+  void dispose() {
+    _emailCtrl.dispose();
+    _passCtrl.dispose();
+    super.dispose();
+  }
+
   Future<void> _handleSignIn() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -31,14 +36,21 @@ class _LoginScreenState extends State<LoginScreen> {
         email: _emailCtrl.text.trim(),
         password: _passCtrl.text.trim(),
       );
-      await PushNotificationService().onUserLogin();
+      try {
+        await PushNotificationService().onUserLogin();
+      } catch (e) {
+        debugPrint('Warning: Could not complete push notification setup on login: $e');
+      }
       if (mounted) {
         context.go('/home');
       }
-    } on FirebaseAuthException catch (e) {
+    } catch (e) {
       if (mounted) {
+        final message = e is FirebaseAuthException
+            ? (e.message ?? 'An error occurred during sign in')
+            : e.toString();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.message ?? 'An error occurred'), backgroundColor: AppColors.danger),
+          SnackBar(content: Text(message), backgroundColor: AppColors.danger),
         );
       }
     } finally {
@@ -90,7 +102,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 8),
                 const Text('Sign in to continue to EventSphere',
                     style: TextStyle(
-                        fontSize: 15, color: AppColors.textSecondary, fontWeight: FontWeight.w500)),
+                        fontSize: 15,
+                        color: AppColors.textSecondary,
+                        fontWeight: FontWeight.w500)),
                 const SizedBox(height: 36),
                 GlassCard(
                   padding: const EdgeInsets.all(24),
@@ -139,7 +153,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onChanged: (v) =>
                                       setState(() => _remember = v!),
                                   activeColor: AppColors.primary,
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(6)),
                                 ),
                                 const Text('Remember me',
                                     style: TextStyle(
@@ -164,20 +179,22 @@ class _LoginScreenState extends State<LoginScreen> {
                           fullWidth: true,
                           size: ButtonSize.lg,
                         ),
-
                         const SizedBox(height: 24),
-                        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                          const Text("Don't have an account? ",
-                              style:
-                                  TextStyle(color: AppColors.textSecondary, fontWeight: FontWeight.w500)),
-                          GestureDetector(
-                            onTap: () => context.go('/signup'),
-                            child: const Text('Sign Up',
-                                style: TextStyle(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.w800)),
-                          ),
-                        ]),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text("Don't have an account? ",
+                                  style: TextStyle(
+                                      color: AppColors.textSecondary,
+                                      fontWeight: FontWeight.w500)),
+                              GestureDetector(
+                                onTap: () => context.go('/signup'),
+                                child: const Text('Sign Up',
+                                    style: TextStyle(
+                                        color: AppColors.primary,
+                                        fontWeight: FontWeight.w800)),
+                              ),
+                            ]),
                       ],
                     ),
                   ),
@@ -190,4 +207,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-

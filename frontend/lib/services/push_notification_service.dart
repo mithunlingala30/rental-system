@@ -88,21 +88,30 @@ class PushNotificationService {
 
   /// Save the FCM token to Firestore under the current user's document
   Future<void> _saveTokenToFirestore({String? token}) async {
-    final uid = FirebaseAuth.instance.currentUser?.uid;
-    if (uid == null) return;
-    final fcmToken = token ?? await _fcm.getToken();
-    if (fcmToken == null) return;
+    try {
+      if (kIsWeb) return;
+      final uid = FirebaseAuth.instance.currentUser?.uid;
+      if (uid == null) return;
+      final fcmToken = token ?? await _fcm.getToken();
+      if (fcmToken == null) return;
 
-    await _db.collection('users').doc(uid).set({
-      'fcmTokens': FieldValue.arrayUnion([fcmToken]),
-      'fcmToken': fcmToken, // Latest token (convenience field)
-    }, SetOptions(merge: true));
-    debugPrint('FCM token saved: $fcmToken');
+      await _db.collection('users').doc(uid).set({
+        'fcmTokens': FieldValue.arrayUnion([fcmToken]),
+        'fcmToken': fcmToken, // Latest token (convenience field)
+      }, SetOptions(merge: true));
+      debugPrint('FCM token saved: $fcmToken');
+    } catch (e) {
+      debugPrint('Warning: Could not save FCM token to Firestore: $e');
+    }
   }
 
   /// Called when user logs in — saves the token for the newly authenticated user
   Future<void> onUserLogin() async {
-    await _saveTokenToFirestore();
+    try {
+      await _saveTokenToFirestore();
+    } catch (e) {
+      debugPrint('Warning: Error in onUserLogin push notification setup: $e');
+    }
   }
 
   /// Show a local notification (heads-up banner with sound + vibration)
@@ -179,5 +188,15 @@ class PushNotificationService {
       });
       return list;
     });
+  }
+
+  /// Stream of unread notification count for the badge on the home screen
+  Stream<int> getUnreadNotificationCount(String userId) {
+    return _db
+        .collection('notifications')
+        .where('userId', isEqualTo: userId)
+        .where('read', isEqualTo: false)
+        .snapshots()
+        .map((snapshot) => snapshot.docs.length);
   }
 }

@@ -51,8 +51,43 @@ class _VendorOrderTrackingScreenState
     extends State<VendorOrderTrackingScreen> {
   final _service = FirebaseService();
   String _filterStatus = 'All';
+  DateTime? _selectedDate = DateTime.now();
 
   static const _filters = ['All', 'Pending', 'Confirmed', 'Delivered', 'Rejected'];
+
+  bool _isToday(DateTime date) {
+    final now = DateTime.now();
+    return date.year == now.year && date.month == now.month && date.day == now.day;
+  }
+
+  String _formatDate(DateTime date) {
+    return '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year}';
+  }
+
+  Future<void> _pickDate() async {
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: _selectedDate ?? DateTime.now(),
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2030),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: const ColorScheme.light(
+              primary: AppColors.primary,
+              onPrimary: Colors.white,
+              surface: Colors.white,
+              onSurface: AppColors.textPrimary,
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
+    if (picked != null) {
+      setState(() => _selectedDate = picked);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,11 +103,150 @@ class _VendorOrderTrackingScreenState
               subtitle: 'Manage customer orders',
             ),
 
-            // ── Filter Chips ──────────────────────────────────────────────────
+            // ── High-Visibility Date Selector Banner ─────────────────────────
+            Container(
+              margin: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.08),
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(Icons.calendar_month_rounded,
+                          color: AppColors.primary, size: 22),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          _selectedDate == null
+                              ? 'Viewing All Booking Dates'
+                              : _isToday(_selectedDate!)
+                                  ? 'Showing Today\'s Bookings (${_formatDate(_selectedDate!)})'
+                                  : 'Showing Bookings for ${_formatDate(_selectedDate!)}',
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800,
+                            color: AppColors.textPrimary,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      // "Today" Button
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () => setState(() => _selectedDate = DateTime.now()),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            padding: const EdgeInsets.symmetric(vertical: 9),
+                            decoration: BoxDecoration(
+                              color: (_selectedDate != null && _isToday(_selectedDate!))
+                                  ? AppColors.primary
+                                  : const Color(0xFFF1F5F9),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: (_selectedDate != null && _isToday(_selectedDate!))
+                                  ? AppColors.bubbleShadow
+                                  : null,
+                            ),
+                            child: Text(
+                              '📅 Today',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: (_selectedDate != null && _isToday(_selectedDate!))
+                                    ? Colors.white
+                                    : AppColors.textSecondary,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      // "Pick Date" Button
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: _pickDate,
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            padding: const EdgeInsets.symmetric(vertical: 9),
+                            decoration: BoxDecoration(
+                              color: (_selectedDate != null && !_isToday(_selectedDate!))
+                                  ? AppColors.primary
+                                  : const Color(0xFFF1F5F9),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: (_selectedDate != null && !_isToday(_selectedDate!))
+                                  ? AppColors.bubbleShadow
+                                  : null,
+                            ),
+                            child: Text(
+                              _selectedDate != null && !_isToday(_selectedDate!)
+                                  ? _formatDate(_selectedDate!)
+                                  : '🗓️ Select Date',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: (_selectedDate != null && !_isToday(_selectedDate!))
+                                    ? Colors.white
+                                    : AppColors.textSecondary,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      // "All Dates" Button
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () => setState(() => _selectedDate = null),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            padding: const EdgeInsets.symmetric(vertical: 9),
+                            decoration: BoxDecoration(
+                              color: _selectedDate == null
+                                  ? AppColors.accent
+                                  : const Color(0xFFF1F5F9),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Text(
+                              'All Dates',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: _selectedDate == null
+                                    ? Colors.white
+                                    : AppColors.textSecondary,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            // ── Status Filter Chips ──────────────────────────────────────────
             SizedBox(
-              height: 52,
+              height: 42,
               child: ListView.separated(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 scrollDirection: Axis.horizontal,
                 itemCount: _filters.length,
                 separatorBuilder: (_, __) => const SizedBox(width: 8),
@@ -84,7 +258,7 @@ class _VendorOrderTrackingScreenState
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 200),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 6),
+                          horizontal: 14, vertical: 6),
                       decoration: BoxDecoration(
                         gradient: selected ? AppColors.accentGradient : null,
                         color: selected
@@ -100,7 +274,7 @@ class _VendorOrderTrackingScreenState
                       child: Text(
                         f,
                         style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 12,
                           fontWeight: selected
                               ? FontWeight.w700
                               : FontWeight.w400,
@@ -114,6 +288,7 @@ class _VendorOrderTrackingScreenState
                 },
               ),
             ),
+            const SizedBox(height: 6),
 
             // ── Orders List ───────────────────────────────────────────────────
             Expanded(
@@ -135,7 +310,7 @@ class _VendorOrderTrackingScreenState
                   }
 
                   final all = snapshot.data ?? [];
-                  final orders = _filterStatus == 'All'
+                  var orders = _filterStatus == 'All'
                       ? all
                       : all.where((o) {
                           if (_filterStatus == 'Pending') {
@@ -144,8 +319,19 @@ class _VendorOrderTrackingScreenState
                           return o.status == _filterStatus;
                         }).toList();
 
+                  if (_selectedDate != null) {
+                    orders = orders.where((o) =>
+                        o.createdAt.year == _selectedDate!.year &&
+                        o.createdAt.month == _selectedDate!.month &&
+                        o.createdAt.day == _selectedDate!.day).toList();
+                  }
+
                   if (orders.isEmpty) {
-                    return _EmptyState(filter: _filterStatus);
+                    return _EmptyState(
+                      filter: _filterStatus,
+                      selectedDate: _selectedDate,
+                      onClearDate: () => setState(() => _selectedDate = null),
+                    );
                   }
 
                   return ListView.builder(
@@ -169,42 +355,81 @@ class _VendorOrderTrackingScreenState
 // ─── Empty State ──────────────────────────────────────────────────────────────
 class _EmptyState extends StatelessWidget {
   final String filter;
-  const _EmptyState({required this.filter});
+  final DateTime? selectedDate;
+  final VoidCallback? onClearDate;
+
+  const _EmptyState({
+    required this.filter,
+    this.selectedDate,
+    this.onClearDate,
+  });
+
+  bool _isToday(DateTime date) {
+    final now = DateTime.now();
+    return date.year == now.year && date.month == now.month && date.day == now.day;
+  }
 
   @override
   Widget build(BuildContext context) {
+    final dateText = selectedDate != null
+        ? (_isToday(selectedDate!)
+            ? 'Today (${selectedDate!.day.toString().padLeft(2, '0')}/${selectedDate!.month.toString().padLeft(2, '0')}/${selectedDate!.year})'
+            : '${selectedDate!.day.toString().padLeft(2, '0')}/${selectedDate!.month.toString().padLeft(2, '0')}/${selectedDate!.year}')
+        : null;
+
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: 80,
-            height: 80,
-            decoration: BoxDecoration(
-              color: AppColors.accent.withValues(alpha: 0.1),
-              shape: BoxShape.circle,
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                color: AppColors.accent.withValues(alpha: 0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.receipt_long_outlined,
+                  color: AppColors.accent, size: 40),
             ),
-            child: const Icon(Icons.receipt_long_outlined,
-                color: AppColors.accent, size: 40),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            filter == 'All'
-                ? 'No bookings yet'
-                : 'No $filter bookings',
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: AppColors.textPrimary,
+            const SizedBox(height: 20),
+            Text(
+              dateText != null
+                  ? 'No $filter bookings on $dateText'
+                  : (filter == 'All' ? 'No bookings yet' : 'No $filter bookings'),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: AppColors.textPrimary,
+              ),
             ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            'Bookings from customers will\nappear here',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.textSecondary, height: 1.5),
-          ),
-        ],
+            const SizedBox(height: 8),
+            Text(
+              dateText != null
+                  ? 'Bookings placed by customers for $dateText will appear here.'
+                  : 'Bookings from customers will appear here.',
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: AppColors.textSecondary, height: 1.4),
+            ),
+            if (selectedDate != null && onClearDate != null) ...[
+              const SizedBox(height: 16),
+              ElevatedButton.icon(
+                onPressed: onClearDate,
+                icon: const Icon(Icons.filter_alt_off_rounded, size: 16),
+                label: const Text('View All Dates'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                ),
+              ),
+            ],
+          ],
+        ),
       ),
     );
   }
@@ -313,15 +538,32 @@ class _OrderCard extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
                                   fontSize: 11, color: AppColors.textSecondary)),
-                        Text(
-                          '${order.createdAt.day.toString().padLeft(2, '0')}/'
-                          '${order.createdAt.month.toString().padLeft(2, '0')}/'
-                          '${order.createdAt.year}  '
-                          '${order.createdAt.hour.toString().padLeft(2, '0')}:'
-                          '${order.createdAt.minute.toString().padLeft(2, '0')}:'
-                          '${order.createdAt.second.toString().padLeft(2, '0')}',
-                          style: const TextStyle(
-                              fontSize: 11, color: AppColors.textSecondary),
+                        const SizedBox(height: 2),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF1F5F9),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.access_time_rounded,
+                                  size: 13, color: AppColors.primary),
+                              const SizedBox(width: 4),
+                              Text(
+                                '${order.createdAt.day.toString().padLeft(2, '0')}/'
+                                '${order.createdAt.month.toString().padLeft(2, '0')}/'
+                                '${order.createdAt.year}  '
+                                '${order.createdAt.hour.toString().padLeft(2, '0')}:'
+                                '${order.createdAt.minute.toString().padLeft(2, '0')}',
+                                style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.textPrimary),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

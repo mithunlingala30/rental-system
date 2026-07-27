@@ -211,8 +211,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
                           final firstVendorId = cartItems.isNotEmpty ? cartItems.first.vendorId : '';
 
+                          final currentUid = FirebaseAuth.instance.currentUser?.uid ?? '';
                           final order = OrderModel(
                             id: '',
+                            customerId: currentUid,
                             customerName: _nameController.text.trim(),
                             phone: _phoneController.text.trim(),
                             address: _addressController.text.trim(),
@@ -232,6 +234,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
                           final savedOrder = OrderModel(
                             id: orderId,
+                            customerId: currentUid,
                             customerName: order.customerName,
                             phone: order.phone,
                             address: order.address,
@@ -1284,8 +1287,39 @@ class _DetailRow extends StatelessWidget {
   }
 }
 
-class BookingHistoryScreen extends StatelessWidget {
+class BookingHistoryScreen extends StatefulWidget {
   const BookingHistoryScreen({super.key});
+
+  @override
+  State<BookingHistoryScreen> createState() => _BookingHistoryScreenState();
+}
+
+class _BookingHistoryScreenState extends State<BookingHistoryScreen> {
+  DateTime? _selectedDate;
+
+  Future<void> _pickDate() async {
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: _selectedDate ?? DateTime.now(),
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2030),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: const ColorScheme.light(
+              primary: Color(0xFF5C1A1A),
+              onPrimary: Colors.white,
+              onSurface: Color(0xFF5C1A1A),
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
+    if (picked != null) {
+      setState(() => _selectedDate = picked);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1309,33 +1343,113 @@ class BookingHistoryScreen extends StatelessWidget {
                         size: 20, color: Color(0xFF5C1A1A)),
                   ),
                   const SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'YOUR ACCOUNT',
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF8B7355),
-                          letterSpacing: 1.5,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'YOUR ACCOUNT',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFF8B7355),
+                            letterSpacing: 1.5,
+                          ),
                         ),
-                      ),
-                      const Text(
-                        'Order History & Tracking',
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900,
-                          color: Color(0xFF5C1A1A),
-                          height: 1.1,
+                        Text(
+                          'Order History & Tracking',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w900,
+                            color: Color(0xFF5C1A1A),
+                            height: 1.1,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 12),
+            // ── Calendar Date Filter Row ──────────────────────────────────────────
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  InkWell(
+                    onTap: _pickDate,
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: _selectedDate != null ? const Color(0xFF5C1A1A) : Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: const Color(0xFF8B7355).withValues(alpha: 0.3)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.04),
+                            blurRadius: 6,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.calendar_month_rounded,
+                            size: 18,
+                            color: _selectedDate != null ? Colors.white : const Color(0xFF5C1A1A),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            _selectedDate != null
+                                ? '${_selectedDate!.day.toString().padLeft(2, '0')}/${_selectedDate!.month.toString().padLeft(2, '0')}/${_selectedDate!.year}'
+                                : 'Filter by Date',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: _selectedDate != null ? Colors.white : const Color(0xFF5C1A1A),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  if (_selectedDate != null) ...[
+                    const SizedBox(width: 10),
+                    GestureDetector(
+                      onTap: () => setState(() => _selectedDate = null),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.red.shade50,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.red.shade200),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.close_rounded, size: 16, color: Colors.red.shade700),
+                            const SizedBox(width: 4),
+                            Text(
+                              'Clear Date',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red.shade700,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
 // -----------------------------------------------------------------------------
             Expanded(
               child: StreamBuilder<List<OrderModel>>(
@@ -1349,7 +1463,15 @@ class BookingHistoryScreen extends StatelessWidget {
                   if (snapshot.hasError) {
                     return Center(child: Text('Error: ${snapshot.error}'));
                   }
-                  final orders = snapshot.data ?? [];
+                  var orders = snapshot.data ?? [];
+
+                  if (_selectedDate != null) {
+                    orders = orders.where((o) =>
+                        o.createdAt.year == _selectedDate!.year &&
+                        o.createdAt.month == _selectedDate!.month &&
+                        o.createdAt.day == _selectedDate!.day).toList();
+                  }
+
                   if (orders.isEmpty) {
                     return Center(
                       child: Column(
@@ -1360,15 +1482,36 @@ class BookingHistoryScreen extends StatelessWidget {
                               color: const Color(0xFF8B7355)
                                   .withValues(alpha: 0.5)),
                           const SizedBox(height: 16),
-                          const Text('No orders yet',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0xFF5C1A1A))),
+                          Text(
+                            _selectedDate != null
+                                ? 'No orders on ${_selectedDate!.day.toString().padLeft(2, '0')}/${_selectedDate!.month.toString().padLeft(2, '0')}/${_selectedDate!.year}'
+                                : 'No orders yet',
+                            style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF5C1A1A)),
+                          ),
                           const SizedBox(height: 4),
-                          const Text('Your order history will appear here',
-                              style: TextStyle(
-                                  fontSize: 13, color: Color(0xFF8B7355))),
+                          Text(
+                            _selectedDate != null
+                                ? 'Try selecting a different date or clearing the filter'
+                                : 'Your order history will appear here',
+                            style: const TextStyle(
+                                fontSize: 13, color: Color(0xFF8B7355)),
+                          ),
+                          if (_selectedDate != null) ...[
+                            const SizedBox(height: 16),
+                            ElevatedButton.icon(
+                              onPressed: () => setState(() => _selectedDate = null),
+                              icon: const Icon(Icons.filter_alt_off_rounded, size: 16),
+                              label: const Text('Show All Orders'),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF5C1A1A),
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                              ),
+                            ),
+                          ],
                         ],
                       ),
                     );

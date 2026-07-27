@@ -138,6 +138,65 @@ class _ChatDetailScreenState extends State<ChatDetailScreen>
     }
   }
 
+  void _confirmClearChat() {
+    if (_chatId.isEmpty) return;
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Clear Chat History'),
+        content: const Text('Are you sure you want to clear all messages in this chat?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () async {
+              Navigator.pop(ctx);
+              await FirebaseService().clearChatMessages(_chatId);
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Chat history cleared')),
+                );
+              }
+            },
+            child: const Text('Clear', style: TextStyle(color: Colors.red)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _confirmDeleteChat() {
+    if (_chatId.isEmpty) return;
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Delete Chat'),
+        content: const Text('Are you sure you want to delete this chat permanently?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () async {
+              Navigator.pop(ctx);
+              await FirebaseService().deleteChat(_chatId);
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Chat deleted')),
+                );
+                context.pop();
+              }
+            },
+            child: const Text('Delete', style: TextStyle(color: Colors.red)),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   void dispose() {
     _ctrl.dispose();
@@ -532,10 +591,41 @@ class _ChatDetailScreenState extends State<ChatDetailScreen>
                       icon: const Icon(Icons.call_rounded,
                           color: Colors.white),
                     ),
-                    IconButton(
-                      onPressed: () {},
+                    PopupMenuButton<String>(
                       icon: const Icon(Icons.more_vert_rounded,
                           color: Colors.white),
+                      onSelected: (value) {
+                        if (value == 'clear') {
+                          _confirmClearChat();
+                        } else if (value == 'delete') {
+                          _confirmDeleteChat();
+                        }
+                      },
+                      itemBuilder: (context) => [
+                        const PopupMenuItem<String>(
+                          value: 'clear',
+                          child: Row(
+                            children: [
+                              Icon(Icons.cleaning_services_outlined,
+                                  size: 20, color: Colors.black54),
+                              SizedBox(width: 12),
+                              Text('Clear chat history'),
+                            ],
+                          ),
+                        ),
+                        const PopupMenuItem<String>(
+                          value: 'delete',
+                          child: Row(
+                            children: [
+                              Icon(Icons.delete_outline_rounded,
+                                  size: 20, color: Colors.red),
+                              SizedBox(width: 12),
+                              Text('Delete chat',
+                                  style: TextStyle(color: Colors.red)),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

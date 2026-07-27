@@ -8,6 +8,7 @@ class UserModel {
   final DateTime createdAt;
   final String? shopName;
   final String? pincode;
+  final String? shopDescription;
 
   UserModel({
     required this.id,
@@ -19,6 +20,7 @@ class UserModel {
     required this.createdAt,
     this.shopName,
     this.pincode,
+    this.shopDescription,
   });
 
   Map<String, dynamic> toMap() {
@@ -31,6 +33,7 @@ class UserModel {
       'createdAt': createdAt.toIso8601String(),
       'shopName': shopName,
       'pincode': pincode,
+      'shopDescription': shopDescription,
     };
   }
 
@@ -45,6 +48,7 @@ class UserModel {
       createdAt: DateTime.parse(map['createdAt'] ?? DateTime.now().toIso8601String()),
       shopName: map['shopName'],
       pincode: map['pincode'],
+      shopDescription: map['shopDescription'],
     );
   }
 }
